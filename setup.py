@@ -7,8 +7,8 @@ from package_name import __version__
 
 # The directory containing this file
 HERE = Path(__file__).parent
-PACKAGE = "package_name"
 
+PACKAGE = "package_name"
 USERNAME = "ThatXliner"
 EMAIL = "bryan.hu.2020@gmail.com"
 
@@ -45,9 +45,12 @@ setup(
         "Source Code": f"https://github.com/{USERNAME}/{PACKAGE}",
         "Tracker": f"https://github.com/{USERNAME}/{PACKAGE}/issues",
     },
-    packages=find_packages(exclude=["tests"], include=[PACKAGE]),
+    packages=find_packages(exclude=["tests"], include=[f"src/{PACKAGE}"]),
     classifiers=CLASSIFIERS,
     python_requires=">=3.6",
     include_package_data=True,
     install_requires=[line for line in REQUIREMENTS if not line.startswith("#")],
+    # scripts=["bin/package_name_script"],
+    # entry_points={"console_scripts": ["package_name=package_name.__main__:_main"]},
+    # keywords="",
 )
