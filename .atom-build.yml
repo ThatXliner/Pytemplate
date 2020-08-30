@@ -1,4 +1,4 @@
-cmd: python3 -m pytest
-sh: false
+cmd:             python3 -m pytest
+sh:              false
 atomCommandName: build:pytest
-keymap: f5
+keymap:          f5
