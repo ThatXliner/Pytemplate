@@ -1,4 +1,0 @@
-cmd:             python3 -m pytest
-sh:              false
-atomCommandName: build:pytest
-keymap:          f5
