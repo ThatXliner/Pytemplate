@@ -18,4 +18,4 @@ from package_name import example_api_func, __version__  # noqa
 
 class TestClass(object):
     def test_example(self):
-        assert __version__ = "0.1.0"
+        assert __version__ == "0.1.0"
