@@ -13,8 +13,9 @@ import pytest  # noqa
 from sys import path
 
 path.insert(0, "../bin")
-from package_name import example_api_func  # noqa
+from package_name import example_api_func, __version__  # noqa
 
 
 class TestClass(object):
-    pass
+    def test_example(self):
+        assert __version__ = "0.1.0"
