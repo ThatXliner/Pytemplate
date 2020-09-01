@@ -6,13 +6,15 @@ Author: Bryan Hu .
 Made with love by Bryan Hu .
 Version: TEST
 Desc: YOU SHOULD NOT USE THIS FILE. IT IS A TEST.
+
+Modify this file to your needs.
 """
 
 import pytest  # noqa
 
 from sys import path
-
-path.insert(0, "../src/")
+from pathlib import Path
+path.insert(0, str(Path(Path(Path(__file__).parent).parent / "src")))
 from package_name import example_api_func, __version__  # noqa
 
 
