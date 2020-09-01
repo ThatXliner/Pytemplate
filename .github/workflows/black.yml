@@ -27,7 +27,7 @@ jobs:
           python3 -m pip install black
 
       - name: Blacken
-        run: black .
+        run: python3 -m black .
 
       - name: Commit report
         run: |
