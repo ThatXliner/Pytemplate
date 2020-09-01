@@ -26,7 +26,7 @@ For git commit messages, it is recommended to write them in past tense (e.g. `Ad
 
 #### Commit message emojis and meaning
 
-NOTICE: Any emoji specified here *are **not*** only limited to only one skin tone: This list just includes one for simplicity. Also, **if any of the emojis listed here have a Github Flavored Markdown (GFM) equivalent, you may also use that. If any of these emojis are not supported by your system, let me know.** [**Contact me**](#contacts).
+NOTICE: Any emoji specified here *are **not*** only limited to only one skin tone: This list just includes one for simplicity. Also, **if any of the emojis listed here have a Github Flavored Markdown (GFM) equivalent, you may also use that. If any of these emojis are not supported by your system, let me know.** [**Contact me**](#owner-thatxliner-bryan-hu).
 
 It is recommended to stick to one constuct in a commit message: either completely use [GFM emoji shortcuts](https://gist.github.com/rxaviers/7360908 "Complete list of github markdown emoji markup") or use Unicode emojis.
 
