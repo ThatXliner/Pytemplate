@@ -14,6 +14,7 @@ import pytest  # noqa
 
 from sys import path
 from pathlib import Path
+
 path.insert(0, str(Path(Path(Path(__file__).parent).parent / "src")))
 from package_name import __version__  # noqa
 
