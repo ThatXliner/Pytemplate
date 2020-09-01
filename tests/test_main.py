@@ -8,7 +8,6 @@ Version: TEST
 Desc: YOU SHOULD NOT USE THIS FILE. IT IS A TEST.
 """
 
-
 import pytest  # noqa
 
 from sys import path

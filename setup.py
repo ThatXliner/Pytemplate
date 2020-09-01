@@ -49,7 +49,9 @@ setup(
     classifiers=CLASSIFIERS,
     python_requires=">=3.6",
     include_package_data=True,
-    install_requires=[line for line in REQUIREMENTS if not line.startswith("#")],
+    install_requires=[
+        line for line in REQUIREMENTS if not line.startswith("#")
+    ],
     # scripts=["bin/package_name_script"],
     # entry_points={"console_scripts": ["package_name=package_name.__main__:_main"]},
     # keywords="",
