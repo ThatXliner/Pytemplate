@@ -20,5 +20,65 @@ Tab size 4 spaces, spaces style.
 
 ### Git commit messages
 
+#### Commit message emojis and meaning
+
+NOTICE: Any emoji specified here *are **not*** only limited to only one skin tone: This list just includes one for simplicity
+
+
+Dependency related emojis:
+ - ⬆️: Increased dependencies
+ - ⬇️: Decreased dependencies
+
+File related emojis
+ - 🔥: Removed files
+ - 📝: New files
+ - ✏️: Edited files
+ - 🎨 or ✨ or 🌟: Beautified file
+   - ⚫️: Beautified with black
+
+OS dependent emojis
+ - 🍎: MacOS related commit
+ - 🐧: Linux related commit
+ - 🖥: Windows related commit
+
+Bug related emojis
+ - ✅: Fixed a bug
+ - ❌: Introduced a bug
+ Possibilities:
+  - ⚠️ or 😬: Possibly introduced a bug
+  - 🟩: Possibly fixed a bug
+
+Language-related emojis
+ - 🐍: Edited a python (or Python related) file. Required if it isn’t the default language
+ - 🦪 or 🐢 or 🟢: Edited a shell/bash (or shell/bash related) file. Required if it isn’t the default language
+
+Efficiency, speed, etc:
+ - 🔋 or ⚡️ or 🏃‍♀️ or 🏃 or 🏃‍♂️: Increased speed
+
+Idea related emojis:
+ - 🤔: Possible idea
+ - 💡: Idea
+ - 🤪: Crazy idea
+General emojis:
+ - 👍: Good or yes or accept
+ - 👎: Bad or no or object
+ - 🤝: Agreement or compromise 
+
+Miscellaneous emojis:
+ - 🤖: Bot-created commit
+ - 👨 or 🧔: Travis CI related commit
+
+
+
+
+
+
+
+
+
+
+
+
+
 ### Pull request messages
 
