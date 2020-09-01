@@ -29,13 +29,13 @@ jobs:
           python3 -m pip install black
       - name: Blacken
         run: python3 -m black .
-      - name: Testing
-        run: which git
+
       - name: Commit
         run: |
          git config --global user.name 'ThatXliner'
          git config --global user.email 'ThatXliner@users.noreply.github.com'
-         git commit -am ":art: Blacken files! [skip travis]"
+         git commit -am ":art: Blacken files! [skip travis]" || echo "Already blackened! 👍"
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
