@@ -33,4 +33,4 @@ jobs:
 
       - name: Commit
         run: |
-          {/usr/bin/git add . && /usr/bin/git config --global user.name 'ThatXliner' && /usr/bin/git config --global user.email 'ThatXliner@users.noreply.github.com' && /usr/bin/git commit -am ":art: Blacken files! [skip travis]" && /usr/bin/git push  }|| echo "Already blackened!👍"
+          {/usr/bin/git add . && /usr/bin/git config --global user.name 'ThatXliner' && /usr/bin/git config --global user.email 'ThatXliner@users.noreply.github.com' && /usr/bin/git commit -am ":art: Blacken files! [skip travis]" && /usr/bin/git push  } || echo "Already blackened!👍"
