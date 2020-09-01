@@ -12,7 +12,7 @@ import pytest  # noqa
 
 from sys import path
 
-path.insert(0, "../bin")
+path.insert(0, "../src")
 from package_name import example_api_func, __version__  # noqa
 
 
