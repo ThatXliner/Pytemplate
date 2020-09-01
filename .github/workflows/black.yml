@@ -1,19 +1,19 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Black
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  Blacken:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -21,15 +21,17 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Install black
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
-      - name: Black Code Formatter
-        uses: lgeiger/black-action@v1.0.1
+          python -m pip install --upgrade pip
+          pip install black
+
+      - name: Blacken
+        run: black .
+
+      - name: Commit report
+        run: |
+          git config --global user.name 'ThatXliner'
+          git config --global user.email 'ThatXliner@users.noreply.github.com'
+          git commit -am ":art: Blacken files!"
+          git push
