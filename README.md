@@ -31,7 +31,7 @@ Optional notice
 
 ### via `git clone`
 
-You can clone this repository, run `cd package_root_folder_name`, and then run `pip install .`/`pip3 install .` (or `python3 -m pip install .`).
+You can clone this repository, run `cd package_root_folder_name`, and then run `pip install .` or `pip3 install .` (or `python3 -m pip install .`).
 
 Here's the complete installation script:
 
@@ -69,6 +69,8 @@ pass
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+[CONTRIBUTING.md](./CONTRIBUTING.md)
 
 ## Help
 
