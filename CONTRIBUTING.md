@@ -53,7 +53,7 @@ TODO: Add GFM emoji shortcuts
  - ❌: Introduced a bug
  Possibilities:
   - ⚠️ or 😬: Possibly introduced a bug
-  - 🟩: Possibly fixed a bug
+  - :cyclone:(`:cyclone:`): Possibly fixed a bug
 
 **Language-related emojis:**
  - 🐍: Edited a python (or Python related) file. Required if it isn’t the default language
