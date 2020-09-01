@@ -36,5 +36,5 @@ jobs:
           git add .
           git config --global user.name 'ThatXliner'
           git config --global user.email 'ThatXliner@users.noreply.github.com'
-          git commit -am ":art: Blacken files!" -d "[skip travis]"
-          git push
+          git commit -am ":art: Blacken files! [skip travis]"
+          git push || echo "Already blackened!👍"
