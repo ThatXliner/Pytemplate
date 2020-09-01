@@ -27,10 +27,16 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install black
-
       - name: Blacken
         run: python3 -m black .
-
+      - name: Testing
+        run: which git
       - name: Commit
         run: |
-          {/usr/bin/git add --all && /usr/bin/git config --global user.name 'ThatXliner' && /usr/bin/git config --global user.email 'ThatXliner@users.noreply.github.com' && /usr/bin/git commit -am ":art: Blacken files! [skip travis]" && /usr/bin/git push  } || echo "Already blackened!👍"
+         git config --global user.name 'ThatXliner'
+         git config --global user.email 'ThatXliner@users.noreply.github.com'
+         git commit -am ":art: Blacken files! [skip travis]"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
