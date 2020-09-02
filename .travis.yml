@@ -59,7 +59,7 @@ jobs:
     - python: "3.9-dev"
     - dist: focal
 script:
-  - make test || pytest tests/ -vvv --durations=3
+  - make test || pytest tests/ -vvv --durations=3 --cov=package_name
 notifications:
   email:
     recipients:
