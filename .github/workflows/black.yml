@@ -39,7 +39,7 @@ jobs:
 
       - name: Commit
         run: |
-         git config --global user.name 'ThatXliner'
+         git config --global user.name 'Blacker'
          git config --global user.email 'ThatXliner@users.noreply.github.com'
          git commit -am ":robot: | :art: - :black_circle: -> Blackened files! [skip travis]" >  /dev/null || echo "Already blackened! 👍"
 
