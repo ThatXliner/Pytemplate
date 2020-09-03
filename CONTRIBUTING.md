@@ -63,9 +63,9 @@ TODO: Add GFM emoji shortcuts
 **File related emojis:**
 
 - :fire:(`:fire:`) Removed files
-- :memo: (`:memo:`): New files
+- :memo: (`:memo:` or `:pencil:`): New files
 - :pencil2: (`:pencil2:`): Edited files
-- :art:(`:art:`) or ✨ or 🌟: Beautified file
+- :art:(`:art:`) or :sparkles:(`:sparkles:`) or 🌟: Beautified file
   - ⚫️: Beautified with black
 
 **OS dependent emojis:**
@@ -77,7 +77,7 @@ TODO: Add GFM emoji shortcuts
 **Bug related emojis:**
 
 - ✅: Fixed a bug
-- ❌: Introduced a bug
+- :x:(`:x:`): Introduced a bug
   Possibilities:
 - :warning: (`:warning:`) or 😬: Possibly introduced a bug
 - :cyclone:(`:cyclone:`): Possibly fixed a bug
@@ -85,11 +85,11 @@ TODO: Add GFM emoji shortcuts
 **Language-related emojis:**
 
 - :snake:(`:snake:`): Edited a python (or Python related) file. Required if it isn’t the default language
-- 🦪 or 🐢 or 🟢: Edited a shell/bash (or shell/bash related) file. Required if it isn’t the default language
+- 🦪 or :turtle:(`:turtle:`) or 🟢: Edited a shell/bash (or shell/bash related) file. Required if it isn’t the default language
 
 **Efficiency, speed, etc:**
 
-- 🔋 or ⚡️ or 🏃‍♀️ or 🏃 or 🏃‍♂️: Increased speed
+- :battery:(`:battery:`) or ⚡️ or 🏃‍♀️ or 🏃 or 🏃‍♂️: Increased speed
 
 **Idea related emojis:**
 
@@ -99,19 +99,19 @@ TODO: Add GFM emoji shortcuts
 
 **General emojis:**
 
-- 👍: Good or yes or accept
-- 👎: Bad or no or object
+- :+1:(`:+1:` or `:thumbsup:`) Good or yes or accept
+- :thumbsdown:(`:thumbsdown:`): Bad or no or object
 - 🤝: Agreement or compromise
 
 **Miscellaneous emojis:**
 
-- 🤖: Bot-created commit
+- :robot:(`:robot:`): Bot-created commit
 - 👨 or 🧔: Travis CI related commit
 
 Example Git commit message:
 
 ```
-Added: __main__.py :memo: :art: :black_circle:
+:memo: Added: __main__.py :memo: :art: :black_circle:
 ```
 
 ### Pull request messages
