@@ -18,13 +18,38 @@ Tab size 4 spaces, spaces style.
 
 ### Git commit messages
 
+I must admit, I personally don't like to write detailed commit messages. But now, I find a need to. So, here is the `git` commit message writing guidelines.
+
 #### General convention
 
 For git commit messages, it is recommended to write them in past tense (e.g. `Added`, `Updated`) and with `Title Case`.
 
+Also, try to add emojis as needed. See [below](#commit-message-emojis-and-meaning). After that, you'd want to seperate the emojis with the actual commit message. You can do so like this (where you replace `*example emoji*` with the emojis required):
+
+```
+*example emoji*: Added: Example_file.txt
+Example commit description.
+```
+
+OR
+
+```
+*example emoji* -> Added: Example_file.txt
+Example commit description.
+```
+
+OR
+
+```
+*example emoji* - Added: Example_file.txt
+Example commit description.
+```
+
+If the commit was made by a robot, you should prefix it with a <code>:robot:|</code>
+
 #### Commit message emojis and meaning
 
-NOTICE: Any emoji specified here \*are **not\*** only limited to only one skin tone: This list just includes one for simplicity. Also, **if any of the emojis listed here have a Github Flavored Markdown (GFM) equivalent, you may also use that. If any of these emojis are not supported by your system, let me know.** [**Contact me**](#owner-thatxliner-bryan-hu).
+NOTICE: Any emoji specified here _are **not**_ only limited to only one skin tone: This list just includes one for simplicity. Also, **it is preferred to use Github flavored markdown emoji shortcuts for it will automatically take care of different encoding schemes et cetera. If there are more shortcuts not listed here, let me know.** [Contact me](#owner-thatxliner-bryan-hu).
 
 It is recommended to stick to one constuct in a commit message: either completely use [GFM emoji shortcuts](https://gist.github.com/rxaviers/7360908 "Complete list of github markdown emoji markup") or use Unicode emojis.
 
@@ -37,29 +62,29 @@ TODO: Add GFM emoji shortcuts
 
 **File related emojis:**
 
-- 🔥: Removed files
-- 📝: New files
+- :fire:(`:fire:`) Removed files
+- :memo: (`:memo:`): New files
 - :pencil2: (`:pencil2:`): Edited files
-- 🎨 or ✨ or 🌟: Beautified file
+- :art:(`:art:`) or ✨ or 🌟: Beautified file
   - ⚫️: Beautified with black
 
 **OS dependent emojis:**
 
-- 🍎: MacOS related commit
-- 🐧: Linux related commit
-- 🖥: Windows related commit
+- :apple:(`:apple:`): MacOS related commit
+- :penguin:(`:penguin:`): Linux related commit
+- :computer:(`:computer:`) or :desktop_computer:(`:desktop_computer:`): Windows related commit
 
 **Bug related emojis:**
 
 - ✅: Fixed a bug
 - ❌: Introduced a bug
   Possibilities:
-- ⚠️ or 😬: Possibly introduced a bug
+- :warning: (`:warning:`) or 😬: Possibly introduced a bug
 - :cyclone:(`:cyclone:`): Possibly fixed a bug
 
 **Language-related emojis:**
 
-- 🐍: Edited a python (or Python related) file. Required if it isn’t the default language
+- :snake:(`:snake:`): Edited a python (or Python related) file. Required if it isn’t the default language
 - 🦪 or 🐢 or 🟢: Edited a shell/bash (or shell/bash related) file. Required if it isn’t the default language
 
 **Efficiency, speed, etc:**
