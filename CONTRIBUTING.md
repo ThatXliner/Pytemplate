@@ -63,7 +63,7 @@ TODO: Add GFM emoji shortcuts
 **File related emojis:**
 
 - :fire:(`:fire:`) Removed files
-- :memo: (`:memo:` or `:pencil:`): New files
+- :memo: (`:memo:` or `:pencil:`): Added files
 - :pencil2: (`:pencil2:`): Edited files
 - :art:(`:art:`) or :sparkles:(`:sparkles:`) or 🌟: Beautified file
   - ⚫️: Beautified with black
@@ -80,7 +80,7 @@ TODO: Add GFM emoji shortcuts
 - :x:(`:x:`): Introduced a bug
   Possibilities:
 - :warning: (`:warning:`) or 😬: Possibly introduced a bug
-- :cyclone:(`:cyclone:`): Possibly fixed a bug
+- :cyclone:(`:cyclone:`): Possibly *fixed* a bug
 
 **Language-related emojis:**
 
