@@ -28,7 +28,6 @@ CLASSIFIERS = [
     "Operating System :: OS Independent",
     "Development Status :: 3 - Alpha",
     "Natural Language :: English",
-    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
     # "Intended Audience :: Developers",
     # "Intended Audience :: End Users/Desktop",
     # "Intended Audience :: System Administrators",
