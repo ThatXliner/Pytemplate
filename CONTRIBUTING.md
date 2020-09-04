@@ -47,6 +47,10 @@ Example commit description.
 
 If the commit was made by a robot, you should prefix it with a <code>:robot:|</code>
 
+Also, keep the actual message to only what's nessecary. Instead of `Switched from TravisCI to Azure` (as if I'd do that), ypu should just write `Switched CI to Azure` or `Ditch Travis, going Azure`.
+
+
+
 #### Commit message emojis and meaning
 
 NOTICE: Any emoji specified here _are **not**_ only limited to only one skin tone: This list just includes one for simplicity. Also, **it is preferred to use Github flavored markdown emoji shortcuts for it will automatically take care of different encoding schemes et cetera. If there are more shortcuts not listed here, let me know.** [Contact me](#owner-thatxliner-bryan-hu).
