@@ -24,7 +24,7 @@ CLASSIFIERS = [
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
     "Programming Language :: Python :: 3 :: Only",
-    "License :: OSI Approved :: MIT License",
+#     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Development Status :: 3 - Alpha",
     "Natural Language :: English",
