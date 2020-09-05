@@ -94,4 +94,4 @@ OR, as a last resort:
 
 ## License
 
-[GNU GPL v3.0](https://choosealicense.com/licenses/gpl-3.0/)
+[GNU GPL v3.0](https://choosealicense.com/licenses/gpl-3.0/) unless noted otherwise. If you want to use this code for proprietary use, [contact me](CONTRIBUTING.md#owner-thatxliner-bryan-hu)
