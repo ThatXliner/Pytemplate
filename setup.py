@@ -8,9 +8,11 @@ from package_name import __version__
 # The directory containing this file
 HERE = Path(__file__).parent
 
+# Usable variables
 PACKAGE = "package_name"
 USERNAME = "ThatXliner"
 EMAIL = "bryan.hu.2020@gmail.com"
+REPO = REPOSITORY = f"https://github.com/{USERNAME}/{PACKAGE}"
 
 # The text of the README file
 README = (HERE / "README.md").read_text()
@@ -43,8 +45,8 @@ setup(
     long_description_content_type="text/markdown",
     long_description=README,
     project_urls={
-        "Source Code": f"https://github.com/{USERNAME}/{PACKAGE}",
-        "Tracker": f"https://github.com/{USERNAME}/{PACKAGE}/issues",
+        "Source Code": REPO,
+        "Tracker": f"{REPO}/issues",
     },
     packages=find_packages(exclude=["tests"], include=[f"src/{PACKAGE}"]),
     # py_modules=["path/to/the/single/file"],
