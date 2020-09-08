@@ -11,6 +11,13 @@ python:
   - "pypy3"
   # - "3.9"
   # 3.9 doesn't exist yet.
+  
+
+branches:
+  only:
+  - master
+  - stable
+
 install:
   - python3 -m ensurepip
   - pip install -r requirements.txt || pip3 install -r requirements.txt
