@@ -60,7 +60,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install flake8 pytest
+          python -m pip install flake8 pytest codecov
           python -m pip install -r requirements.txt
       - name: Test with pytest
         run: |
@@ -78,4 +78,4 @@ jobs:
           CODECOV_TOKEN: "8ed282bf-c057-4f09-aaed-9ac914d4dffb"
 
 
-        run: bash <(curl -s https://codecov.io/bash)
+        run: codecov || bash <(curl -s https://codecov.io/bash)
