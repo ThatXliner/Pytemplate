@@ -2,7 +2,7 @@ PYTHON := python3
 PROJECT_NAME := package_name
 
 test:
-	@pytest tests/ -vvv --durations=3
+	@pytest tests/ -vvv --durations=3 --cov=src/package_name
 deps:
 	@$(PYTHON) -m ensurepip
 	@echo "Installing dependencies..."
