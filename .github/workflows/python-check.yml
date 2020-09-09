@@ -74,8 +74,8 @@ jobs:
           flake8 . --count --show-source --statistics --max-complexity=20
           
       - name: Codecov
-        env:  # ONLY NESSECARY FOR PRIVATE PROJECTS
-          CODECOV_TOKEN: "8ed282bf-c057-4f09-aaed-9ac914d4dffb"
+       # env:  # ONLY NESSECARY FOR PRIVATE PROJECTS
+       #  CODECOV_TOKEN: "8ed282bf-c057-4f09-aaed-9ac914d4dffb"
 
 
         run: codecov || curl -s https://codecov.io/bash | bash
