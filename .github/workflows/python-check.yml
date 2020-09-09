@@ -64,7 +64,7 @@ jobs:
           python -m pip install -r requirements.txt
       - name: Test with pytest
         run: |
-          make test || pytest tests/ -vvv --durations=3 --cov=src/pytemplate
+          make test || pytest tests/ -vvv --durations=3 --cov=src/package_name
 
       - name: Lint with flake8
         #         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
