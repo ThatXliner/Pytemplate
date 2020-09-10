@@ -10,7 +10,7 @@ deps:
 
 dev-deps:
 	@$(PYTHON) -m ensurepip
-	@echo "Installing developer dependencies"
+	@echo "Installing developer dependencies..."
 	@$(PYTHON) -m pip install -r dev-requirements.txt > /dev/null
 
 build:
@@ -24,4 +24,4 @@ develop:
 	@$(PYTHON) -m ensurepip
 	@$(PYTHON) setup.py sdist bdist_wheel
 	@$(PYTHON) -m pip install -e .
-	@find . -type d \( -name '__pycache__' -or -name '*.egg-info' -or -name 'dist' -or -name 'build' -or -name '.pytest_cache' \)  -exec rm -rf {} +
+	
