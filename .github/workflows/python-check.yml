@@ -65,7 +65,15 @@ jobs:
       - name: Test with pytest
         run: |
           make test || pytest tests/ -vvv --durations=3 --cov=src/package_name
+      - name: Codecov
+       # env:  # ONLY NESSECARY FOR PRIVATE PROJECTS
+       #  CODECOV_TOKEN: "8ed282bf-c057-4f09-aaed-9ac914d4dffb"
+        run: curl -s https://codecov.io/bash | bash
 
+  flake8:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
       - name: Lint with flake8
         #         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         #         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
@@ -73,9 +81,4 @@ jobs:
           # stop the build if there are Python syntax errors or undefined names
           flake8 . --count --show-source --statistics --max-complexity=20
           
-      - name: Codecov
-       # env:  # ONLY NESSECARY FOR PRIVATE PROJECTS
-       #  CODECOV_TOKEN: "8ed282bf-c057-4f09-aaed-9ac914d4dffb"
 
-
-        run: curl -s https://codecov.io/bash | bash
