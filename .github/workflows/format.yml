@@ -28,7 +28,9 @@ jobs:
         run: python3 -m black .
 
       - name: git pull
-        run: git pull --all
+        run: |
+          git config pull.ff only 
+          git pull --all
 
       - name: Commit
         run: |
@@ -56,7 +58,9 @@ jobs:
         - name: Isort
           run: python3 -m isort .
         - name: git pull
-          run: git pull --all
+          run: |
+            git config pull.ff only 
+            git pull --all
         - name: Commit
           run: |
             git config --global user.name 'Formatter'
