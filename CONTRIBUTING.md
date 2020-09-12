@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for taking the time to learn how to contribute! Not only reading this help your contribution to get more likely accepted, it'll help you in the futuree for all projects made from the [ThatXliner/Pytemplate](https://github.com/ThatXliner/Pytemplate) template!
+Thank you for taking the time to learn how to contribute! Not only reading this help your contribution to get more likely accepted, it'll help you in the future for all projects made from the [ThatXliner/Pytemplate](https://github.com/ThatXliner/Pytemplate) template!
 
 ## Styles
 
@@ -51,7 +51,7 @@ If the commit was made by a robot, you should prefix it with a <code>:robot:|</c
 
 NOTICE: Any emoji specified here _are **not**_ only limited to only one skin tone: This list just includes one for simplicity. Also, **it is preferred to use Github flavored markdown emoji shortcuts for it will automatically take care of different encoding schemes et cetera. If there are more shortcuts not listed here, let me know.** [Contact me](#owner-thatxliner-bryan-hu).
 
-It is recommended to stick to one constuct in a commit message: either completely use [GFM emoji shortcuts](https://gist.github.com/rxaviers/7360908 "Complete list of github markdown emoji markup") or use Unicode emojis.
+It is recommended to stick to one constuct in a commit message: either completely use [**GFM emoji shortcuts**](https://gist.github.com/rxaviers/7360908 "Complete list of github markdown emoji markup") or use Unicode emojis.
 
 TODO: Add GFM emoji shortcuts
 
