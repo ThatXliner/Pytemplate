@@ -1,7 +1,7 @@
 # For a Github action version of Travis CI. This will check code over all supported versions
 # Travis CI will cover some multi-os
 
-name: Python check
+name: PythonCI
 
 on:
   push:
