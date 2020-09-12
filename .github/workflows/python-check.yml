@@ -53,7 +53,7 @@ jobs:
       - name: Get pip cache dir
         id: pip-cache
         run: |
-          echo "::set-output name=dir::$(pip cache dir)"
+          echo "::set-output name=dir::$(python -m pip cache dir)"
 
       - uses: actions/cache@v2
         # if: startsWith(runner.os, 'Linux')
@@ -70,6 +70,12 @@ jobs:
             ${{ runner.os }}-restore
             ${{ runner.os }}-restore-pip
 
+      - name: Check Python 
+        run: |
+          python -V
+          python3 -V || echo "Only python exists"
+          pip -V || echo "Pip doesn't exist"
+          pip3 -V || echo "Pip3 doesn't exist"
 
       - name: Install dependencies
         run: |
