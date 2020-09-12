@@ -27,6 +27,9 @@ jobs:
       - name: Blacken
         run: python3 -m black .
 
+      - name: git pull
+        run: git pull --all
+
       - name: Commit
         run: |
           git config --global user.name 'Formatter'
@@ -52,7 +55,8 @@ jobs:
             python3 -m pip install isort
         - name: Isort
           run: python3 -m isort .
-
+        - name: git pull
+          run: git pull --all
         - name: Commit
           run: |
             git config --global user.name 'Formatter'
