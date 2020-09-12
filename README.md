@@ -19,6 +19,9 @@ Short description.
 
 <!-- /TOC -->
 
+![PythonCI](https://github.com/ThatXliner/Pytemplate/workflows/PythonCI/badge.svg)
+
+
 ## What is this?
 
 > _"Optional quote" - Johnny Appleseed_
