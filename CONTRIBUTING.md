@@ -57,15 +57,15 @@ TODO: Add GFM emoji shortcuts
 
 **Dependency related emojis:**
 
-- ⬆️: Increased dependencies
-- ⬇️: Decreased dependencies
+- :arrow_up:(`:arrow_up`): Increased dependencies
+- :arrow_down:(`:arrow_down`): Decreased dependencies
 
 **File related emojis:**
 
-- :fire:(`:fire:`) Removed files
+- :fire:(`:fire:`): Removed files
 - :memo: (`:memo:` or `:pencil:`): Added files
 - :pencil2: (`:pencil2:`): Edited files
-- :art:(`:art:`) or :sparkles:(`:sparkles:`) or 🌟: Beautified file
+- :art:(`:art:`) or :sparkles:(`:sparkles:`) or :star2:(`:star2:`) or :star:(`:star`): Beautified file
   - ⚫️: Beautified with black
 
 **OS dependent emojis:**
@@ -76,16 +76,16 @@ TODO: Add GFM emoji shortcuts
 
 **Bug related emojis:**
 
-- ✅: Fixed a bug
+- :white_check_mark:(`:white_check_mark:`): Fixed a bug
 - :x:(`:x:`): Introduced a bug
   Possibilities:
-- :warning: (`:warning:`) or 😬: Possibly introduced a bug
+- :warning: (`:warning:`) or :grimacing:(`:grimacing:`): Possibly introduced a bug
 - :cyclone:(`:cyclone:`): Possibly *fixed* a bug
 
 **Language-related emojis:**
 
 - :snake:(`:snake:`): Edited a python (or Python related) file. Required if it isn’t the default language
-- 🦪 or :turtle:(`:turtle:`) or 🟢: Edited a shell/bash (or shell/bash related) file. Required if it isn’t the default language
+- 🦪 or :turtle:(`:turtle:`) or :green_circle:(`:green_circle:`): Edited a shell/bash (or shell/bash related) file. Required if it isn’t the default language
 
 **Efficiency, speed, etc:**
 
@@ -93,15 +93,15 @@ TODO: Add GFM emoji shortcuts
 
 **Idea related emojis:**
 
-- 🤔: Possible idea
+- :thinking:(`:thinking:`): Possible idea
 - 💡: Idea
 - 🤪: Crazy idea
 
 **General emojis:**
 
-- :+1:(`:+1:` or `:thumbsup:`) Good or yes or accept
-- :thumbsdown:(`:thumbsdown:`): Bad or no or object
-- 🤝: Agreement or compromise
+- :+1:(`:+1:` or `:thumbsup:`): Good or yes or accept
+- :-1:(`:-1:` or `:thumbsdown:`): Bad or no or object
+- :handshake:(`:handshake:`): Agreement or compromise
 
 **Miscellaneous emojis:**
 
