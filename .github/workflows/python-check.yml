@@ -73,7 +73,6 @@ jobs:
       - name: Check Python 
         run: |
           python -V
-          python3 -V || echo "Only python exists"
           pip -V || echo "Pip doesn't exist"
           pip3 -V || echo "Pip3 doesn't exist"
 
