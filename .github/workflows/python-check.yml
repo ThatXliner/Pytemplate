@@ -53,6 +53,7 @@ jobs:
             ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/dev-requirements.txt') }}
             ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
             ${{ runner.os }}-pip-${{ hashFiles('**/dev-requirements.txt') }}
+            ${{ runner.os }}-pip-
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v2
