@@ -3,6 +3,11 @@ version = 1
 [[analyzers]]
 name = "python"
 enabled = true
+dependency_file_paths = [
+  "requirements.txt",
+  "Pipfile",
+  "*-requirements.txt"
+]
 
   [analyzers.meta]
   runtime_version = "3.x.x"
@@ -14,3 +19,8 @@ enabled = true
 [[transformers]]
 name = "isort"
 enabled = true
+
+test_patterns = [
+  "tests/**",
+  "test_*.py"
+]
