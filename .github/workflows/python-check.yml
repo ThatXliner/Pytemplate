@@ -61,6 +61,9 @@ jobs:
             ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
             ${{ runner.os }}-pip-${{ hashFiles('**/dev-requirements.txt') }}
             ${{ runner.os }}-pip-key
+            ${{ runner.os }}-
+            ${{ runner.os }}-restore
+            ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -90,6 +93,9 @@ jobs:
             ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
             ${{ runner.os }}-pip-${{ hashFiles('**/dev-requirements.txt') }}
             ${{ runner.os }}-pip-key
+            ${{ runner.os }}-
+            ${{ runner.os }}-restore
+            ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
