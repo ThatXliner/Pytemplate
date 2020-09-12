@@ -95,7 +95,7 @@ TODO: Add GFM emoji shortcuts
 
 - :thinking:(`:thinking:`): Possible idea
 - 💡: Idea
-- 🤪: Crazy idea
+- :zany_face:(`:zany_face:`): Crazy idea
 
 **General emojis:**
 
@@ -107,7 +107,7 @@ TODO: Add GFM emoji shortcuts
 
 - :robot:(`:robot:`): Bot-created commit
 - 👨 or 🧔: Travis CI related commit
-
+- :octocat: (`:octocat:`): GitHub-related commit
 Example Git commit message:
 
 ```
