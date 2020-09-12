@@ -46,7 +46,7 @@ jobs:
       - name: Skip based on commit message
         uses: veggiemonk/skip-commit@1.0.0
         with:
-          COMMIT_FILLER: "[skip ci]"
+          COMMIT_FILTER: "[skip ci]"
 
       - uses: actions/checkout@v2
       - name: Set up Python ${{ matrix.python-version }}
@@ -84,7 +84,7 @@ jobs:
       - name: Skip based on commit message
         uses: veggiemonk/skip-commit@1.0.0
         with:
-          COMMIT_FILLER: "[skip ci]"
+          COMMIT_FILTER: "[skip ci]"
 
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
