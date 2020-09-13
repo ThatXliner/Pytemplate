@@ -21,14 +21,11 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v2
-      - name: Get pip cache dir
-        id: pip-cache
-        run: |
-          echo "::set-output name=dir::$(python -m pip cache dir)"
+
       - uses: actions/cache@v2
         # if: startsWith(runner.os, 'Linux')
         with:
-          path: ${{ steps.pip-cache.outputs.dir }}
+          path: ~/.cache/pip
           key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/dev-requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip
