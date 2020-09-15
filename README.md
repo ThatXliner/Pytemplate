@@ -19,7 +19,7 @@ Short description.
 
 <!-- /TOC -->
 
-![PythonCI](https://github.com/ThatXliner/Pytemplate/workflows/PythonCI/badge.svg)
+![PythonCI](https://github.com/ThatXliner/Pytemplate/workflows/PythonCI/badge.svg) [![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 
 ## What is this?
