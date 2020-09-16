@@ -70,12 +70,6 @@ jobs:
             ${{ runner.os }}-restore
             ${{ runner.os }}-restore-pip
 
-      - name: Check Python 
-        run: |
-          python -V
-          pip -V || echo "Pip doesn't exist"
-          pip3 -V || echo "Pip3 doesn't exist"
-
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -86,7 +80,7 @@ jobs:
           make test || pytest tests/ -vvv --durations=3 --cov=src/package_name
       - name: Codecov
        # env:  # ONLY NESSECARY FOR PRIVATE PROJECTS
-       #  CODECOV_TOKEN: "8ed282bf-c057-4f09-aaed-9ac914d4dffb"
+       #  CODECOV_TOKEN: "8ed282b
         run: curl -s https://codecov.io/bash | bash
 
   flake8:
