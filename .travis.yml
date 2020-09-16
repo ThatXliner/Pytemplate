@@ -21,7 +21,7 @@ branches:
 install:
   - python3 -m ensurepip
   - pip install -r requirements.txt || pip3 install -r requirements.txt
-  - pip install pytest-cov
+  # - pip install pytest-cov
   # Instead of the usual pip install -r dev-requirements.txt
   - pip install pytest || pip3 install pytest
   - pip3 install pytest
@@ -67,7 +67,7 @@ jobs:
     - python: "3.9-dev"
     - dist: focal
 script:
-  - make test || pytest tests/ -vvv --durations=3 --cov=package_name
+  - make test || pytest tests/ -vvv --durations=3
 notifications:
   email:
     recipients:
