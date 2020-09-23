@@ -76,7 +76,7 @@ TODO: Add GFM emoji shortcuts
 
 **Bug related emojis:**
 
-- :white_check_mark:(`:white_check_mark:`): Fixed a bug
+- :white_check_mark:(`:white_check_mark:`) or :bug:(`:bug:`): Fixed a bug
 - :x:(`:x:`): Introduced a bug
   Possibilities:
 - :warning: (`:warning:`) or :grimacing:(`:grimacing:`): Possibly introduced a bug
