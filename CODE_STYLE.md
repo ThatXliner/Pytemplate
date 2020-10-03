@@ -54,30 +54,28 @@ Python is for readability. But speaking about performance....
 
 Ok, so I know that you shouldn't be doing pre-mature optimizations in python. But the thing is, what if **it's code style**? It is.
 
-If you require a specific type of object as one of your parameters (when defining a function), the recommended approach is the following:
-
-```python
-def some_function(arg1: some_obj, arg2: int) -> None:
-    arg1 = some_other_obj(arg1)
-    arg2 = int(arg2)
-    ...  # Other code here
-```
-
-as opposed to this:
-
-```python
-def some_function(arg1: some_obj, arg2: int) -> None:
-    arg1 = some_other_obj(arg1) if not isinstance(arg1, some_obj) else arg1
-    arg2 = int(arg2) if not isinstance(arg2, int) else arg2
-    ...  # Other code here
-```
-because, THAT'S NOT READABLE!
-
-> "Sparse is better than dense.
-> Readability counts."
-> \- Lines 6 and 7 of The Zen of Python
-
+If you require a specific type of object as one of your parameters (when defining a function), the recommended approach is to use type hints. This will reduce 
+unnecessary function calls and will greatly improve readability, code maintainability, and user experience (especially if you use a linter such as [MyPy](http://mypy-lang.org/)). 
 
 What about `try`/`except`s? And `if`/`elif`/`else` statements?
 
 The answer is, it depends. It depends on the type of situation.
+
+As described in the [python documentation](https://docs.python.org/3/faq/design.html#how-fast-are-exceptions):
+
+>A try/except block is extremely efficient if no exceptions are raised. Actually catching an exception is expensive. In versions of Python prior to 2.0 it was common to use this idiom:
+```
+try:
+    value = mydict[key]
+except KeyError:
+    mydict[key] = getvalue(key)
+    value = mydict[key]
+```
+>This only made sense when you expected the dict to have the key almost all the time. If that wasn’t the case, you coded it like this:
+```
+if key in mydict:
+    value = mydict[key]
+else:
+    value = mydict[key] = getvalue(key)
+```
+>For this specific case, you could also use `value = dict.setdefault(key, getvalue(key))`, but only if the `getvalue()` call is cheap enough because it is evaluated in all cases.
