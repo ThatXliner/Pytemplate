@@ -12,7 +12,7 @@ All kinds of styles (e.g. code style, git commit style, comment style, etc) will
 
 Most of the code style is covered by our preferred formatter, black (<sub><a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black"></a></sub>).
 
-The hard line limit (in characters) is `90`. The soft limit is `80` to `88`.
+The hard line limit (in characters) is `90`. The soft limit is `80` to `88`. But it is recommended to set your editor's soft wrap at 88 characters.
 
 Tab size 4 spaces, spaces style.
 
@@ -27,25 +27,28 @@ For git commit messages, it is recommended to write them in past tense (e.g. `Ad
 Also, try to add emojis as needed. See [below](#commit-message-emojis-and-meaning). After that, you'd want to seperate the emojis with the actual commit message. You can do so like this (where you replace `*example emoji*` with the emojis required):
 
 ```
-*example emoji*: Added: Example_file.txt
-Example commit description.
+*example emoji*: Added Example_file.txt
+
+Why and where. [skip ci]
 ```
 
 OR
 
 ```
-*example emoji* -> Added: Example_file.txt
-Example commit description.
+*example emoji* -> Added Example_file.txt
+
+Why and where. [skip ci]
 ```
 
 OR
 
 ```
-*example emoji* - Added: Example_file.txt
-Example commit description.
+*example emoji* - Added Example_file.txt
+
+Why and where. [skip ci]
 ```
 
-If the commit was made by a robot, you should prefix it with a <code>:robot:|</code>
+If the commit was made by a robot, you should prefix it with a <code>:robot:|:some_other_emoji:</code>
 
 #### Commit message emojis and meaning
 
@@ -111,10 +114,17 @@ TODO: Add GFM emoji shortcuts
 Example Git commit message:
 
 ```
-:memo: Added: __main__.py :memo: :art: :black_circle:
+:memo: :art: :black_circle: : Added __main__.py
 ```
 
 ### Pull request messages
+
+TK.
+
+
+### Files and folders
+
+Try to keep the file names and folder names `lowercase`. This is because **some systems treat folder/filenames case insensitively**.
 
 ## Contacts
 
