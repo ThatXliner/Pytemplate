@@ -156,8 +156,8 @@ jobs:
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip pytest pytest-cov --no-warn-script-location.
-          python -m pip install -r requirements.txt --no-warn-script-location.
+          python -m pip install --no-warn-script-location --upgrade pip pytest pytest-cov
+          python -m pip install  --no-warn-script-location -r requirements.txt
       - name: Test with pytest
         run: |
           make test || pytest tests/ -vvv --durations=3 --cov=src/package_name
