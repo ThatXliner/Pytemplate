@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [master]
 jobs:
-  "pytest Ubuntu":
+  "pytest-Ubuntu":
     strategy:
       matrix:
         python-version:  # 3.6 to 3.9
@@ -63,7 +63,7 @@ jobs:
           make test || pytest tests/ -vvv --durations=3 --cov=src/package_name
       - name: Codecov Upload
         run: curl -s https://codecov.io/bash | bash
-  "pytest MacOS":
+  "pytest-MacOS":
     strategy:
       matrix:
         python-version:  # 3.6 to 3.9
@@ -120,7 +120,7 @@ jobs:
           make test || pytest tests/ -vvv --durations=3 --cov=src/package_name
       - name: Codecov Upload
         run: curl -s https://codecov.io/bash | bash
-  "pytest Windows":
+  "pytest-Windows":
     strategy:
       matrix:
         python-version:  # 3.6 to 3.9
