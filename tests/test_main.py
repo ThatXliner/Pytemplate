@@ -11,11 +11,11 @@ Modify this file to your needs.
 """
 
 from pathlib import Path
-from sys import path
+import sys
 
 import pytest  # noqa
 
-path.insert(0, str(Path(Path(Path(__file__).parent).parent / "src")))
+sys.path.insert(0, str(Path(Path(Path(__file__).parent).parent / "src")))
 from package_name import __version__  # noqa
 
 
