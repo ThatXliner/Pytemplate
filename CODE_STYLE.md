@@ -61,7 +61,7 @@ What about `try`/`except`s? And `if`/`elif`/`else` statements?
 
 The answer is, it depends. It depends on the type of situation.
 
-As described in the [python documentation](https://docs.python.org/3/faq/design.html#how-fast-are-exceptions):
+The [python documentation](https://docs.python.org/3/faq/design.html#how-fast-are-exceptions) can sort of explain:
 
 >A try/except block is extremely efficient if no exceptions are raised. Actually catching an exception is expensive. In versions of Python prior to 2.0 it was common to use this idiom:
 ```
@@ -79,3 +79,30 @@ else:
     value = mydict[key] = getvalue(key)
 ```
 >For this specific case, you could also use `value = dict.setdefault(key, getvalue(key))`, but only if the `getvalue()` call is cheap enough because it is evaluated in all cases.
+
+### Import statements
+
+NOTE: Import statements should be [`isort`][1]ed. Our GitHub Action will do that for you, if you can't access [`isort`][1].
+
+The `import` statements you use should conform to [Google's Python Style](https://google.github.io/styleguide/pyguide.html#22-imports)-style `import` statements. 
+Here's the summary of it:
+
+ - Use `import` for packages/modules only, not anything else. This means you shouldn't be doing `from foo import bar` if `bar` is not a package
+   * Exceptions: `import`ing from `six.moves` and the `typing` module 
+ -  Do `import y as z` or `from x import y as z` **only if** one or more of the following is true:
+    * `z` is a command/standard abbreviation (e.g. `import numpy as np`)
+    * If `y` is an inconveniently long name
+- Use `from x import y` where `x` is the package prefix and `y` is the module name with no prefix.
+    * Example: `from foo.bar import baz`. **NOT** `from foo import bar.baz`
+
+Further details can be found [here](https://google.github.io/styleguide/pyguide.html#224-decision).
+
+Modules should be imported by their full path (e.g. `import folder.subfolder.foo.bar`).
+
+Editing the [`sys.path`](https://docs.python.org/3/library/sys.html#sys.path) should be a last resort (e.g. Importing a module from a folder above).
+
+**Why?**
+
+Because ugly/unorganized import statements are bad. Plus, they may contribute to ambiguity, recursive imports, and a whole lot of bugs that we don't want to encounter.
+
+[1]: https://pypi.org/project/isort/
