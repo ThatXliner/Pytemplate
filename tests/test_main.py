@@ -10,8 +10,8 @@ Desc: YOU SHOULD NOT USE THIS FILE. IT IS A TEST.
 Modify this file to your needs.
 """
 
-from pathlib import Path
 import sys
+from pathlib import Path
 
 import pytest  # noqa
 
