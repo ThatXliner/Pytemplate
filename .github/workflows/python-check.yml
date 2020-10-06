@@ -158,9 +158,9 @@ jobs:
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install pytest pytest-cov
-          python3 -m pip install -r requirements.txt
+          python -m pip install --upgrade pip
+          python -m pip install pytest pytest-cov
+          python -m pip install -r requirements.txt
       - name: Test with pytest
         run: |
           make test || pytest tests/ -vvv --durations=3 --cov=src/package_name
