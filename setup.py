@@ -8,13 +8,13 @@ from setuptools import find_packages, setup
 from package_name import __version__
 
 # The directory containing this file
-HERE = Path(__file__).parent
+HERE: Path = Path(__file__).parent
 
 # Usable variables
-PACKAGE = "package_name"
-USERNAME = "ThatXliner"
-EMAIL = "bryan.hu.2020@gmail.com"
-REPO = REPOSITORY = f"https://github.com/{USERNAME}/{PACKAGE}"
+PACKAGE: str = "package_name"
+USERNAME: str = "ThatXliner"
+EMAIL: str = "bryan.hu.2020@gmail.com"
+REPO: str = REPOSITORY = f"https://github.com/{USERNAME}/{PACKAGE}"
 
 # The text of the README file
 README = (HERE / "README.md").read_text()
