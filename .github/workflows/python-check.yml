@@ -192,7 +192,7 @@ jobs:
       - name: Lint with flake8
         run: |
           # stop the build if there are Python syntax errors or undefined names
-          python3 -m flake8 . --count --show-source --statistics --max-complexity=20
+          python3 -m flake8 .
   "mypy":
     runs-on: ubuntu-latest
     steps:
