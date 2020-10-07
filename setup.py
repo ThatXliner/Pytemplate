@@ -14,7 +14,7 @@ HERE: Path = Path(__file__).parent
 PACKAGE: str = "package_name"
 USERNAME: str = "ThatXliner"
 EMAIL: str = "bryan.hu.2020@gmail.com"
-REPO: str = REPOSITORY = f"https://github.com/{USERNAME}/{PACKAGE}"
+REPO = REPOSITORY = f"https://github.com/{USERNAME}/{PACKAGE}"  # type: str
 
 # The text of the README file
 README = (HERE / "README.md").read_text()
