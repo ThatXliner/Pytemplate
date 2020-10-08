@@ -108,7 +108,6 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip
-          python3 -m pip install -r bot-tester-requirements.txt
           python3 -m pip install -r requirements.txt -r bot-tester-requirements.txt
       - name: Test with pytest
         run: |
