@@ -43,20 +43,20 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/dev-requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/bot-tester-requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/dev-requirements.txt') }}-2
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/bot-tester-requirements.txt') }}-2
             ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-            ${{ runner.os }}-pip-${{ hashFiles('**/dev-requirements.txt') }}
+            ${{ runner.os }}-pip-${{ hashFiles('**/bot-tester-requirements.txt') }}
             ${{ runner.os }}-pip-key
             ${{ runner.os }}-
             ${{ runner.os }}-restore
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip pytest
-          python3 -m pip install -r requirements.txt
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r requirements.txt bot-tester-requirements.txt
       - name: Test with pytest
         run: |
           make test || pytest tests/ -vvv --durations=3
@@ -95,20 +95,21 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~/Library/Caches/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/dev-requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/bot-tester-requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/dev-requirements.txt') }}-2
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/bot-tester-requirements.txt') }}-2
             ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-            ${{ runner.os }}-pip-${{ hashFiles('**/dev-requirements.txt') }}
+            ${{ runner.os }}-pip-${{ hashFiles('**/bot-tester-requirements.txt') }}
             ${{ runner.os }}-pip-key
             ${{ runner.os }}-
             ${{ runner.os }}-restore
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip pytest
-          python3 -m pip install -r requirements.txt
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r bot-tester-requirements.txt
+          python3 -m pip install -r requirements.txt bot-tester-requirements.txt
       - name: Test with pytest
         run: |
           make test || pytest tests/ -vvv --durations=3
@@ -138,20 +139,20 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~\AppData\Local\pip\Cache
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/dev-requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/bot-tester-requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/dev-requirements.txt') }}-2
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/bot-tester-requirements.txt') }}-2
             ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-            ${{ runner.os }}-pip-${{ hashFiles('**/dev-requirements.txt') }}
+            ${{ runner.os }}-pip-${{ hashFiles('**/bot-tester-requirements.txt') }}
             ${{ runner.os }}-pip-key
             ${{ runner.os }}-
             ${{ runner.os }}-restore
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python -m pip install --no-warn-script-location --upgrade pip pytest
-          python -m pip install  --no-warn-script-location -r requirements.txt
+          python -m pip install --no-warn-script-location --upgrade pip
+          python -m pip install  --no-warn-script-location -r requirements.txt bot-tester-requirements.txt
       - name: Test with pytest
         run: |
           make test || pytest tests/ -vvv --durations=3
@@ -167,12 +168,11 @@ jobs:
         id: cache
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/dev-requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/dev-requirements.txt') }}-2
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}-2
             ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-            ${{ runner.os }}-pip-${{ hashFiles('**/dev-requirements.txt') }}
             ${{ runner.os }}-pip-key
             ${{ runner.os }}-
             ${{ runner.os }}-restore
@@ -197,12 +197,11 @@ jobs:
         id: cache
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/dev-requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/dev-requirements.txt') }}-2
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}-2
             ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-            ${{ runner.os }}-pip-${{ hashFiles('**/dev-requirements.txt') }}
             ${{ runner.os }}-pip-key
             ${{ runner.os }}-
             ${{ runner.os }}-restore
