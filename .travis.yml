@@ -20,7 +20,7 @@ branches:
 
 install:
   - python3 -m ensurepip
-  - pip3 install -r requirements.txt dev-requirements.txt bot-tester-requirements.txt
+  - pip3 install -r requirements.txt dev-requirements.txt -r bot-tester-requirements.txt
   - pip3 install pytest
 
 cache: pip
