@@ -13,6 +13,7 @@ from package_name import (
     __version__,
 )
 
+from re import search
 # The directory containing this file
 HERE: Path = Path(__file__).parent
 
@@ -46,7 +47,7 @@ CLASSIFIERS = [
 setup(
     name=__title__,
     version=__version__,
-    author="Bryan Hu",
+    author=search(r"(\w+ \w+) <([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)>", __author__)[1],
     author_email=__contact__,
     description=__description__,
     long_description_content_type="text/markdown",
