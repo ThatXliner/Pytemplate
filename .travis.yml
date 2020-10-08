@@ -20,8 +20,8 @@ branches:
 
 install:
   - python3 -m ensurepip
-  - pip3 install -r requirements.txt -r bot-tester-requirements.txt -r dev-requirements.txt
-  - pip3 install pytest
+  - pip3 install -r requirements.txt
+  - pip3 install pytest pytest-cov
 
 cache: pip
 jobs:
@@ -62,6 +62,7 @@ jobs:
   allow_failures:
     - python: "nightly"
     - python: "3.9-dev"
+    - python: "pypy3"
 script:
   - python3 -m pytest tests/ -vvv --durations=3  --cov=src
 after_success:
