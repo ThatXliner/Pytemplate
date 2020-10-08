@@ -35,16 +35,12 @@ jobs:
       # The fun stuff
       - name: Blacken
         run: python3 -m black .
-      - name: git pull
-        run: |
-          git config pull.ff only
-          git pull --all
+
       - name: Commit
         run: |
           git config --global user.name 'Formatter[bot]'
           git config --global user.email 'ThatXliner@users.noreply.github.com'
           git commit -am ":robot: | :art: - :black_circle: -> Blackened files! [skip ci]" >  /dev/null || echo "Already blackened! 👍"
-          git pull --all
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
@@ -79,16 +75,11 @@ jobs:
         # The fun stuff
         - name: Isort
           run: python3 -m isort .
-        - name: git pull
-          run: |
-            git config pull.ff only
-            git pull --all
         - name: Commit
           run: |
             git config --global user.name 'Formatter[bot]'
             git config --global user.email 'ThatXliner@users.noreply.github.com'
             git commit -am ":robot: | :art: -> Isorted files! [skip ci]" >  /dev/null || echo "Already Isorted! 👍"
-            git pull --all
         - name: Push changes
           uses: ad-m/github-push-action@master
           with:
