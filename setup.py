@@ -6,8 +6,13 @@ from re import search
 
 from setuptools import find_packages, setup
 
-from package_name import (__author__, __contact__, __description__, __title__,
-                          __version__)
+from package_name import (
+    __author__,
+    __contact__,
+    __description__,
+    __title__,
+    __version__,
+)
 
 # The directory containing this file
 HERE: Path = Path(__file__).parent
@@ -44,9 +49,7 @@ _EMAIL_REGEX: str = r"""(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_
 setup(
     name=__title__,
     version=__version__,
-    author=search(
-        r"(\w+ \w+) <"+_EMAIL_REGEX+">", __author__
-    )[1],
+    author=search(r"(\w+ \w+) <" + _EMAIL_REGEX + ">", __author__)[1],
     author_email=__contact__,
     description=__description__,
     long_description_content_type="text/markdown",
