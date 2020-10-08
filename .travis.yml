@@ -19,9 +19,9 @@ branches:
   - stable
 
 install:
-  - python3 -m ensurepip
+  - python3 -m ensurepip --upgrade
   - pip3 install -r requirements.txt
-  - pip3 install pytest pytest-cov
+  - pip3 install --upgrade -r bot-tester-requirements.txt
 
 cache: pip
 jobs:
