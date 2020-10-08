@@ -21,10 +21,7 @@ branches:
 install:
   - python3 -m ensurepip
   - pip install -r requirements.txt || pip3 install -r requirements.txt
-  # - pip install pytest-cov
-  # Instead of the usual pip install -r dev-requirements.txt
   - pip install pytest || pip3 install pytest
-  - pip3 install pytest
 
 cache: pip
 jobs:
@@ -65,14 +62,25 @@ jobs:
   allow_failures:
     - python: "nightly"
     - python: "3.9-dev"
-    - dist: focal
 script:
   - make test || pytest tests/ -vvv --durations=3
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 notifications:
   email:
-    recipients:
-      - bryan.hu.2020@gmail.com
     on_success: change # default: change
     on_failure: always # default: always
+before_deploy:
+ - make clean
+deploy:
+  provider: pypi
+  username: __token__
+  password:
+    secure: pypi-your_token_here
+  distributions: "sdist bdist_wheel"
+  skip_existing: true
+  on:
+    branch:
+      - master
 git:
   quiet: true
