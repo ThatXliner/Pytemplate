@@ -70,17 +70,17 @@ notifications:
   email:
     on_success: change # default: change
     on_failure: always # default: always
-before_deploy:
- - make clean
-deploy:
-  provider: pypi
-  username: __token__
-  password:
-    secure: pypi-your_token_here
-  distributions: "sdist bdist_wheel"
-  skip_existing: true
-  on:
-    branch:
-      - master
+# before_deploy:
+#  - make clean
+# deploy:
+#   provider: pypi
+#   username: __token__
+#   password:
+#     secure: pypi-your_token_here
+#   distributions: "sdist bdist_wheel"
+#   skip_existing: true
+#   on:
+#     branch:
+#       - master
 git:
   quiet: true
