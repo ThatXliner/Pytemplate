@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """To setup."""
 from pathlib import Path
-from re import search
+from re import compile as re_compile
 
 from setuptools import find_packages, setup
 
@@ -44,12 +44,19 @@ CLASSIFIERS = [
     # "Intended Audience :: System Administrators",
     # "Topic :: Utilities",
 ]
-_EMAIL_REGEX: str = r"""(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"""
-
+_EMAIL_REGEX: str = r"""(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`"""
+                    r"""{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5"""
+                    r"""d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9]"""
+                    r"""(?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])"""
+                    r"""?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))"""
+                    r"""\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|["""
+                    r"""a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a"""
+                    r"""\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])"""
+AUTHOR_RE = re_compile(r"(\w+ \w+) <" + _EMAIL_REGEX + ">")
 setup(
     name=__title__,
     version=__version__,
-    author=search(r"(\w+ \w+) <" + _EMAIL_REGEX + ">", __author__)[1],
+    author=AUTHOR_RE.search(__author__)[1],
     author_email=__contact__,
     description=__description__,
     long_description_content_type="text/markdown",
