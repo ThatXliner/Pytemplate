@@ -20,8 +20,8 @@ branches:
 
 install:
   - python3 -m ensurepip
-  - pip install -r requirements.txt || pip3 install -r requirements.txt
-  - pip install pytest || pip3 install pytest
+  - pip3 install -r requirements.txt
+  - pip3 install pytest
 
 cache: pip
 jobs:
@@ -63,7 +63,7 @@ jobs:
     - python: "nightly"
     - python: "3.9-dev"
 script:
-  - make test || pytest tests/ -vvv --durations=3
+  - make test || python3 -m pytest tests/ -vvv --durations=3
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 notifications:
