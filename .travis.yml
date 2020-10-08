@@ -1,10 +1,5 @@
 language: python
-dist:
-- xenial
-- bionic
-- focal
-- precise
-- trusty
+dist: xenial
 os: linux
 
 python:
@@ -47,6 +42,22 @@ jobs:
       os: osx
       osx_image: xcode12
       language: shell
+
+    - name: "Unbuntu 12"
+      os: linux
+      dist: precise
+    - name: "Ubuntu 14"
+      os: linux
+      dist: trusty
+    - name: "Ubuntu 16"
+      os: linux
+      dist: xenial
+    - name: "Ubuntu 18"
+      os: linux
+      dist: bionic
+    - name: "Ubuntu 20"
+      os: linux
+      dist: focal
   fast_finish: true
   allow_failures:
     - python: "nightly"
