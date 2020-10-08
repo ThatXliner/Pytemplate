@@ -5,15 +5,14 @@ from pathlib import Path
 
 from setuptools import find_packages, setup
 
-from package_name import __version__
+from package_name import __title__, __version__, __author__, __contact__, __description__
 
 # The directory containing this file
 HERE: Path = Path(__file__).parent
 
 # Usable variables
-PACKAGE: str = "package_name"
-USERNAME: str = "ThatXliner"
-EMAIL: str = "bryan.hu.2020@gmail.com"
+USERNAME: str = "ThatXliner"  # Your Github username
+PACKAGE: str = __title__  # The name of the repo
 REPO = REPOSITORY = f"https://github.com/{USERNAME}/{PACKAGE}"  # type: str
 
 # The text of the README file
@@ -39,11 +38,11 @@ CLASSIFIERS = [
     # "Topic :: Utilities",
 ]
 setup(
-    name=PACKAGE,
+    name=__title__,
     version=__version__,
     author="Bryan Hu",
-    author_email=EMAIL,
-    description="Short description",
+    author_email=__contact__,
+    description=__description__,
     long_description_content_type="text/markdown",
     long_description=README,
     project_urls={
