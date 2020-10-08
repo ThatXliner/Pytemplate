@@ -1,6 +1,6 @@
 name: PythonCI
 
-# Codecov covered here. Pypi upload covered in Travis-CI
+# Pypi upload and coverage covered in Travis-CI
 
 on:
   push:
@@ -55,13 +55,11 @@ jobs:
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip pytest pytest-cov
+          python3 -m pip install --upgrade pip pytest
           python3 -m pip install -r requirements.txt
       - name: Test with pytest
         run: |
-          make test || pytest tests/ -vvv --durations=3 --cov=src/package_name
-      - name: Codecov Upload
-        run: curl -s https://codecov.io/bash | bash
+          make test || pytest tests/ -vvv --durations=3
   "pytest-MacOS":
     strategy:
       matrix:
@@ -109,11 +107,11 @@ jobs:
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip pytest pytest-cov
+          python3 -m pip install --upgrade pip pytest
           python3 -m pip install -r requirements.txt
       - name: Test with pytest
         run: |
-          make test || pytest tests/ -vvv --durations=3 --cov=src/package_name
+          make test || pytest tests/ -vvv --durations=3
   "pytest-Windows":
     strategy:
       matrix:
@@ -152,11 +150,11 @@ jobs:
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python -m pip install --no-warn-script-location --upgrade pip pytest pytest-cov
+          python -m pip install --no-warn-script-location --upgrade pip pytest
           python -m pip install  --no-warn-script-location -r requirements.txt
       - name: Test with pytest
         run: |
-          make test || pytest tests/ -vvv --durations=3 --cov=src/package_name
+          make test || pytest tests/ -vvv --durations=3
   "flake8":
     runs-on: ubuntu-latest
     steps:
