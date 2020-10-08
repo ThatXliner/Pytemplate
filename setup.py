@@ -6,8 +6,13 @@ from pathlib import Path
 
 from setuptools import find_packages, setup
 
-from package_name import (__author__, __contact__, __description__, __title__,
-                          __version__)
+from package_name import (
+    __author__,
+    __contact__,
+    __description__,
+    __title__,
+    __version__,
+)
 
 # The directory containing this file
 HERE: Path = Path(__file__).parent
