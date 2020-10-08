@@ -1,5 +1,7 @@
 name: PythonCI
 
+# Codecov covered here. Pypi upload covered in Travis-CI
+
 on:
   push:
     branches: [master]
