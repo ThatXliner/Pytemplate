@@ -1,4 +1,4 @@
-PYTHON := $(if ! [ $(uname) == "win32" ] || [[ $(uname) == win* ]]; then echo "python3"; else echo "python"; fi)
+PYTHON := $(if command -v python >/dev/null 2>&1 then echo "python"; else if command -v python3 >/dev/null 2>&1 then echo "python3"; fi;fi;)
 PROJECT_NAME := package_name
 
 test:
