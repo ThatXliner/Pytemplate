@@ -154,4 +154,5 @@ jobs:
           python -m pip install  --no-warn-script-location -r requirements.txt -r bot-tester-requirements.txt
       - name: Test with pytest
         run: |
+          doskey python3=python
           make test
