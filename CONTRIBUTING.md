@@ -24,7 +24,7 @@ I must admit, I personally don't like to write detailed commit messages. But now
 
 For git commit messages, it is recommended to write them in past tense (e.g. `Added`, `Updated`) and with `Title Case`.
 
-Also, try to add emojis as needed. See [below](#commit-message-emojis-and-meaning). After that, you'd want to seperate the emojis with the actual commit message. You can do so like this (where you replace `*example emoji*` with the emojis required):
+Also, *try* to add emojis as needed. **You don't *need* to.** See [below](#commit-message-emojis-and-meaning). After that, you'd want to seperate the emojis with the actual commit message. You can do so like this (where you replace `*example emoji*` with the emojis required):
 
 ```
 *example emoji*: Added Example_file.txt
@@ -87,8 +87,8 @@ TODO: Add GFM emoji shortcuts
 
 **Language-related emojis:**
 
-- :snake:(`:snake:`): Edited a python (or Python related) file. Required if it isn’t the default language
-- 🦪 or :turtle:(`:turtle:`) or :green_circle:(`:green_circle:`): Edited a shell/bash (or shell/bash related) file. Required if it isn’t the default language
+- :snake:(`:snake:`): Edited a python (or Python related) file.
+- 🦪 or :turtle:(`:turtle:`) or :green_circle:(`:green_circle:`): Edited a shell/bash (or shell/bash related) file.
 
 **Efficiency, speed, etc:**
 
@@ -111,6 +111,7 @@ TODO: Add GFM emoji shortcuts
 - :robot:(`:robot:`): Bot-created commit
 - 👨 or 🧔: Travis CI related commit
 - :octocat: (`:octocat:`): GitHub-related commit
+- :package: (`:package:`): A packing-related commit
 Example Git commit message:
 
 ```
