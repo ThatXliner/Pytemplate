@@ -6,9 +6,9 @@ This is a guideline that describes more specific parts of the code style used in
 
 
 ### Line length
-Unlike [PEP8](https://www.python.org/dev/peps/pep-0008/), the hard limit for all lines is `90` characters wide. The recommended limit is somewhere between 80 to 88 characters.
+Unlike [PEP8](https://www.python.org/dev/peps/pep-0008/), the hard limit for all lines is `90` characters wide (which is also contrasting to [black's documentation](https://black.readthedocs.io/en/stable/the_black_code_style.html#:~:text=Black%20defaults%20to%2088%20characters%20per%20line%2C,significantly%20shorter%20files%20than%20sticking%20with%2080)). The recommended limit is 88 characters.
 
-It is recommended to set your editor's soft wrap setting at 90 and press <kbd>enter</kbd> or <kbd>return</kbd> at every soft line break. That'll help you wrap strings easier. But it won't really help when you plan to expand them (e.g. docstrings) in the future for it may not be the most optimal setting. So use your own discretion.
+When writing docstrings, it is recommended to set your editor's soft wrap setting at 90 and press <kbd>enter</kbd> or <kbd>return</kbd> at every soft line break. That'll help you wrap strings easier. But it won't really help when you plan to expand them (e.g. docstrings) in the future for it may not be the most optimal setting. So use your own discretion.
 
 **What happens if I have a _very_ long string? How should I split it up?**
 
