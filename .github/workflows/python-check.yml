@@ -55,7 +55,7 @@ jobs:
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade pip wheel setuptools
           python3 -m pip install -r requirements.txt -r bot-tester-requirements.txt
       - name: Test with pytest
         run: |
@@ -107,7 +107,7 @@ jobs:
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade pip wheel setuptools
           python3 -m pip install -r requirements.txt -r bot-tester-requirements.txt
       - name: Test with pytest
         run: |
@@ -150,7 +150,7 @@ jobs:
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python -m pip install --no-warn-script-location --upgrade pip
+          python -m pip install --no-warn-script-location --upgrade pip wheel setuptools
           python -m pip install  --no-warn-script-location -r requirements.txt -r bot-tester-requirements.txt
       - name: Test with pytest
         run: |
