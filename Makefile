@@ -2,7 +2,7 @@ PYTHON := python3
 PROJECT_NAME := package_name
 
 test:
-	@($PYTHON) -m pytest tests/ -vvv --durations=3
+	@$(PYTHON) -m pytest tests/ -vvv --durations=3
 deps:
 	@$(PYTHON) -m ensurepip
 	@echo "Installing dependencies..."
