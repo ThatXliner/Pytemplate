@@ -24,7 +24,7 @@ to this:
 print("Some super-duper long string that will go over the recommended line limit of 80 "
 "to 88 characters. This is definitely going to go past the 90 character hard limit.")
 ```
-And if you have f-strings, you can just put an `f` in front of every separate string. It'll concatenate normally, without any errors.
+And if you have f-strings, you can just put an `f` in front of every separate `str`ing. It'll concatenate normally, without any errors. The same goes for `r`aw `str`ings.
 
 **What about comments?**
 
