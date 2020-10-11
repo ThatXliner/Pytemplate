@@ -16,9 +16,9 @@ from pathlib import Path
 import pytest  # noqa
 
 sys.path.insert(0, str(Path(Path(Path(__file__).parent).parent / "src")))
-from package_name import __version__  # noqa
+from src.package_name import __version__  # noqa
 
 
 class TestClass(object):
-    def test_example(self):
+    def test_example(self) -> None:
         assert __version__ == "0.1.0"
