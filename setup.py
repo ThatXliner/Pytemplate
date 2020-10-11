@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+# type: ignore
 """To setup."""
 from pathlib import Path
 
-from setuptools import find_packages, setup
+import setuptools
 
-from package_name import (
+from src.package_name import (
     __author__,
     __contact__,
     __description__,
@@ -14,11 +15,11 @@ from package_name import (
 )
 
 # The directory containing this file
-HERE: Path = Path(__file__).parent
+HERE = Path(__file__).parent
 
 # Usable variables
-USERNAME: str = "ThatXliner"  # Your Github username
-PACKAGE: str = __title__  # The name of the repo
+USERNAME = "ThatXliner"  # Your Github username
+PACKAGE = __title__  # The name of the repo
 REPO = REPOSITORY = f"https://github.com/{USERNAME}/{PACKAGE}"  # type: str
 
 # The text of the README file
@@ -44,7 +45,7 @@ CLASSIFIERS = [
     # "Topic :: Utilities",
 ]
 
-setup(
+setuptools.setup(
     name=__title__,
     version=__version__,
     author=__author__,
@@ -52,11 +53,8 @@ setup(
     description=__description__,
     long_description_content_type="text/markdown",
     long_description=README,
-    project_urls={
-        "Source Code": REPO,
-        "Tracker": f"{REPO}/issues",
-    },
-    packages=find_packages(exclude=["tests"], include=[f"src/{PACKAGE}"]),
+    project_urls={"Source Code": REPO, "Tracker": f"{REPO}/issues"},
+    packages=setuptools.find_packages(exclude=["tests"], include=["src"]),
     # py_modules=["path/to/the/single/file"],
     classifiers=CLASSIFIERS,
     python_requires=">=3.6",
