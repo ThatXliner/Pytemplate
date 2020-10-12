@@ -6,11 +6,7 @@ from pathlib import Path
 
 import setuptools
 
-from src.package_name import (
-    __author__,
-    __contact__,
-    __version__,
-)
+from src.package_name import __author__, __contact__, __version__
 
 # The directory containing this file
 HERE = Path(__file__).parent
