@@ -16,9 +16,11 @@ from pathlib import Path
 import pytest  # noqa
 
 sys.path.insert(0, str(Path(Path(Path(__file__).parent).parent / "src")))
-from src.package_name import __version__  # noqa
+import package_name
 
 
 class TestClass(object):
-    def test_example(self) -> None:
-        assert __version__ == "0.1.0"
+    def test_factorial(self) -> None:
+        assert package_name.factorial(9) == 362880
+        assert package_name.factorial(0) == 1
+        assert package_name.factorial(-0) == 1

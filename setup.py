@@ -9,8 +9,6 @@ import setuptools
 from src.package_name import (
     __author__,
     __contact__,
-    __description__,
-    __title__,
     __version__,
 )
 
@@ -19,12 +17,14 @@ HERE = Path(__file__).parent
 
 # Usable variables
 USERNAME = "ThatXliner"  # Your Github username
-PACKAGE = __title__  # The name of the repo
-REPO = REPOSITORY = f"https://github.com/{USERNAME}/{PACKAGE}"  # type: str
+PACKAGE = "Pytemplate"  # The name of the repo
+REPO = f"https://github.com/{USERNAME}/{PACKAGE}"
 
 # The text of the README file
 README = (HERE / "README.md").read_text()
 REQUIREMENTS = (HERE / "requirements.txt").read_text().split("\n")
+DESC = "Short description shown on Pypi."
+
 CLASSIFIERS = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.6",
@@ -46,11 +46,11 @@ CLASSIFIERS = [
 ]
 
 setuptools.setup(
-    name=__title__,
+    name="some_package_name_avalible_on_pypi",
     version=__version__,
     author=__author__,
     author_email=__contact__,
-    description=__description__,
+    description=DESC,
     long_description_content_type="text/markdown",
     long_description=README,
     project_urls={"Source Code": REPO, "Tracker": f"{REPO}/issues"},

@@ -7,12 +7,20 @@ Long description.
 """
 from typing import List
 
-__title__: str = "package_name"  # A unique name avalible in Pypi
-__version__: str = "0.1.0"  # VERSION_BUMP_ANCHOR
-__contact__: str = "bryan.hu.2020@gmail.com"  # The email of the initial author
-__author__: str = f"Bryan Hu <{__contact__}>"  # The initial author of this project
-# NOTE: THE FORMAT OF `__author__` SHOULD ALWAYS BE "FIRST LAST <EMAIL ADDRESS>"
+from .__main__ import *  # noqa
 
-# The short description that will be shown on Pypi
-__description__: str = "Short description"
+# We do this because we're assuming that __main__.py defines an __all__ list
+# (all modules should)
+# But if it doesn't, we'll specify the stuff to import
+
+__title__: str = "package_name"  # The name of the package
+__version__: str = "0.1.0"  # VERSION_BUMP_ANCHOR
+
+# The email of the initial author
+__contact__: str = "bryan.hu.2020@gmail.com"
+
+# The initial author of this project
+__author__: str = f"Bryan Hu <{__contact__}>"
+# NOTE: THE FORMAT OF `__author__` SHOULD ALWAYS BE
+# "FIRST LAST <EMAIL ADDRESS>"
 __credits__: List[str] = []  # Other contributors

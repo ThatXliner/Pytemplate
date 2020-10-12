@@ -1,16 +1,55 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Author: Bryan Hu .
+Initial author: Bryan Hu .
 
-@Bryan Hu .
+@ThatXliner .
 
-Made with love by Bryan Hu .
+Version: v0.1.0
 
+Short summary
 
-Version: See __init__.py
-
-Desc: The main file that will get imported.
-
+Long description
 """
-pass
+import functools
+import operator
+from typing import Iterable, TypeVar
+
+AnyNum = TypeVar("AnyNum", int, float, complex)
+__all__ = ["factorial", "multiply_all"]
+
+
+def factorial(number: int) -> int:
+    """A function that calculates the factorial of a number.
+
+    Parameters
+    ----------
+    number : int
+        The :arg:`number` to calculate the factorial of.
+
+    Returns
+    -------
+    int
+        The factorial of the number.
+    """
+    if number < 1:
+        return 1
+    else:
+        return number * factorial(number - 1)
+
+
+def multiply_all(some_iter: Iterable[AnyNum]) -> AnyNum:
+    """Multiplies all elements in the given iterable.
+
+    Parameters
+    ----------
+    some_iter : Iterable[AnyNum]
+        The iterable whose elements will be multiplied together.
+
+    Returns
+    -------
+    AnyNum
+        The product of all the elements in the given iterable.
+
+    """
+    return functools.reduce(operator.mul, some_iter)  # type: ignore
