@@ -2,6 +2,8 @@ PYTHON := $(python3)
 PROJECT_NAME := package_name
 
 test:
+        @$(PYTHON) -m ensurepip --upgrade
+	@$(PYTHON) -m pip install -r bot-requirements.txt -r requirements.txt
 	@$(PYTHON) -m pytest tests/ -vvv --durations=3
 deps:
 	@$(PYTHON) -m ensurepip
