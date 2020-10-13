@@ -1,28 +1,28 @@
 PYTHON := $(python3)
-PYTHONM := $(python3 -m)
+PYTHONM := $($(PYTHON) -m)
 PROJECT_NAME := package_name
 
 test:
 	@$(PYTHONM) pytest tests/ -vvv --durations=3
 deps:
-	@$(PYTHON) -m ensurepip
+	@$(PYTHONM) ensurepip
 	@echo "Installing dependencies..."
-	@$(PYTHON) -m pip install -r requirements.txt > /dev/null
+	@$(PYTHONM) pip install -r requirements.txt > /dev/null
 
 dev-deps:
-	@$(PYTHON) -m ensurepip
+	@$(PYTHONM) ensurepip
 	@echo "Installing developer dependencies..."
-	@$(PYTHON) -m pip install -r dev-requirements.txt > /dev/null
+	@$(PYTHONM) pip install -r dev-requirements.txt > /dev/null
 
 build:
 	@$(PYTHON) setup.py sdist bdist_wheel
 
 clean:
-	@$(PYTHON) -m ensurepip
+	@$(PYTHONM) ensurepip
 	@find . -type d \( -name '__pycache__' -or -name '*.egg-info' -or -name 'dist' -or -name 'build' -or -name '.pytest_cache' \)  -exec rm -rf {} +
-	@black . || @$(PYTHON) -m pip install black > /dev/null || @echo "Black failed."
+	@black . || @$(PYTHONM) pip install black > /dev/null || @echo "Black failed."
 develop:
-	@$(PYTHON) -m ensurepip
+	@$(PYTHONM) ensurepip
 	@$(PYTHON) setup.py sdist bdist_wheel
-	@$(PYTHON) -m pip install -e .
+	@$(PYTHONM) pip install -e .
 	
