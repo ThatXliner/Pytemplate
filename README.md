@@ -19,7 +19,7 @@ Short description.
 
 <!-- /TOC -->
 
-![PythonCI](https://github.com/ThatXliner/Pytemplate/workflows/PythonCI/badge.svg) [![Build Status](https://travis-ci.com/ThatXliner/Pytemplate.svg?branch=master)](https://travis-ci.com/ThatXliner/Pytemplate) [![codecov](https://codecov.io/gh/ThatXliner/Pytemplate/branch/master/graph/badge.svg)](https://codecov.io/gh/ThatXliner/Pytemplate)
+[![PythonCI](https://github.com/ThatXliner/Pytemplate/workflows/PythonCI/badge.svg)](https://github.com/ThatXliner/Pytemplate/actions?query=workflow%3APythonCI) [![Build Status](https://travis-ci.com/ThatXliner/Pytemplate.svg?branch=master)](https://travis-ci.com/ThatXliner/Pytemplate) [![codecov](https://codecov.io/gh/ThatXliner/Pytemplate/branch/master/graph/badge.svg)](https://codecov.io/gh/ThatXliner/Pytemplate)
 
 
 ## What is this?
