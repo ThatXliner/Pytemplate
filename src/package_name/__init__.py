@@ -7,6 +7,7 @@ Long description.
 """
 from typing import List
 
+__all__: List[str] = ["sub_module"]
 __title__: str = "package_name"  # The name of the package
 __version__: str = "0.1.0"  # VERSION_BUMP_ANCHOR
 
