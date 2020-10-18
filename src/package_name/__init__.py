@@ -7,12 +7,6 @@ Long description.
 """
 from typing import List
 
-from .__main__ import *  # noqa
-
-# We do this because we're assuming that __main__.py defines an __all__ list
-# (all modules should)
-# But if it doesn't, we'll specify the stuff to import
-
 __title__: str = "package_name"  # The name of the package
 __version__: str = "0.1.0"  # VERSION_BUMP_ANCHOR
 

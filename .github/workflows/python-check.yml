@@ -43,12 +43,12 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/bot-tester-requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/bot-tester-requirements.txt') }}-2
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}-2
             ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-            ${{ runner.os }}-pip-${{ hashFiles('**/bot-tester-requirements.txt') }}
+            ${{ runner.os }}-pip-${{ hashFiles('**/pytest-requirements.txt') }}
             ${{ runner.os }}-pip-key
             ${{ runner.os }}-
             ${{ runner.os }}-restore
@@ -56,7 +56,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip wheel setuptools
-          python3 -m pip install -r requirements.txt -r bot-tester-requirements.txt
+          python3 -m pip install -r requirements.txt -r pytest-requirements.txt
       - name: Test with pytest
         run: |
           make test
@@ -95,12 +95,12 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~/Library/Caches/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/bot-tester-requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/bot-tester-requirements.txt') }}-2
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}-2
             ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-            ${{ runner.os }}-pip-${{ hashFiles('**/bot-tester-requirements.txt') }}
+            ${{ runner.os }}-pip-${{ hashFiles('**/pytest-requirements.txt') }}
             ${{ runner.os }}-pip-key
             ${{ runner.os }}-
             ${{ runner.os }}-restore
@@ -108,7 +108,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip wheel setuptools
-          python3 -m pip install -r requirements.txt -r bot-tester-requirements.txt
+          python3 -m pip install -r requirements.txt -r pytest-requirements.txt
       - name: Test with pytest
         run: |
           make test
@@ -138,12 +138,12 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~\AppData\Local\pip\Cache
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/bot-tester-requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/bot-tester-requirements.txt') }}-2
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}-2
             ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-            ${{ runner.os }}-pip-${{ hashFiles('**/bot-tester-requirements.txt') }}
+            ${{ runner.os }}-pip-${{ hashFiles('**/pytest-requirements.txt') }}
             ${{ runner.os }}-pip-key
             ${{ runner.os }}-
             ${{ runner.os }}-restore
@@ -151,7 +151,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --no-warn-script-location --upgrade pip wheel setuptools
-          python -m pip install  --no-warn-script-location -r requirements.txt -r bot-tester-requirements.txt
+          python -m pip install  --no-warn-script-location -r requirements.txt -r pytest-requirements.txt
       - name: Test with pytest
         run: |
           python -m pytest tests/ -vvv --durations=3
