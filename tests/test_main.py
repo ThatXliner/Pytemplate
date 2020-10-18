@@ -20,8 +20,8 @@ sys.path.insert(0, str(Path(Path(Path(__file__).parent).parent / "src")))
 import package_name
 
 
-class TestClass(object):
+class Test_sub_module(object):
     def test_factorial(self) -> None:
-        assert package_name.factorial(9) == 362880
-        assert package_name.factorial(0) == 1
-        assert package_name.factorial(-0) == 1
+        assert package_name.sub_module.factorial(9) == 362880
+        assert package_name.sub_module.factorial(0) == 1
+        assert package_name.sub_module.factorial(-0) == 1
