@@ -16,12 +16,13 @@ python:
 branches:
   only:
   - master
-  - stable
 
 install:
+  - pwd
   - python3 -m ensurepip --upgrade
   - pip3 install -r requirements.txt
   - pip3 install --upgrade -r pytest-requirements.txt
+  - pip3 install wheel setuptools
 
 cache: pip
 jobs:
@@ -65,6 +66,7 @@ jobs:
     - python: "pypy3"
 script:
   - python3 -m pytest tests/ -vvv --durations=3  --cov=src
+  - python3 setup.py sdist bdist_wheel
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 notifications:

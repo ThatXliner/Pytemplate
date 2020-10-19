@@ -60,6 +60,7 @@ jobs:
       - name: Test with pytest
         run: |
           make test
+          python3 setup.py sdist bdist_wheel
   "pytest-MacOS":
     strategy:
       matrix:
@@ -112,6 +113,7 @@ jobs:
       - name: Test with pytest
         run: |
           make test
+          python3 setup.py sdist bdist_wheel
   "pytest-Windows":
     strategy:
       matrix:
@@ -155,3 +157,4 @@ jobs:
       - name: Test with pytest
         run: |
           python -m pytest tests/ -vvv --durations=3
+          python setup.py sdist bdist_wheel

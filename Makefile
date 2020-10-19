@@ -1,6 +1,5 @@
 PYTHON := $(python3)
 PYTHONM := $($(PYTHON) -m)
-PROJECT_NAME := package_name
 
 test:
 	@$(PYTHONM) pytest tests/ -vvv --durations=3
