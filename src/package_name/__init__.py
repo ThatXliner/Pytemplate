@@ -7,7 +7,6 @@ Long description.
 """
 from typing import List
 
-
 from . import sub_module  # noqa: F401
 
 # from .sub_module import *  # noqa
