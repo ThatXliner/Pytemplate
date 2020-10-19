@@ -6,8 +6,8 @@ Package summary.
 Long description.
 """
 from typing import List
-from .sub_module import *  # noqa
 
+from .sub_module import *  # noqa
 
 # sub_module is required to have an __all__ variable declared
 # The reason for this is that the package root directory __init__.py
