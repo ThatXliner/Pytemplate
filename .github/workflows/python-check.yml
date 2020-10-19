@@ -61,7 +61,7 @@ jobs:
         run: |
           make test
           pwd
-          cd Pytemplate
+          cd ..
           make build
   "pytest-MacOS":
     strategy:
@@ -116,7 +116,7 @@ jobs:
         run: |
           make test
           pwd
-          cd Pytemplate
+          cd ..
           make build
   "pytest-Windows":
     strategy:
@@ -161,5 +161,5 @@ jobs:
       - name: Test with pytest
         run: |
           python -m pytest tests/ -vvv --durations=3
-          cd Pytemplate
+          cd ..
           python setup.py sdist bdist_wheel
