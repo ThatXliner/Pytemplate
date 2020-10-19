@@ -1,4 +1,4 @@
-PYTHON := $(python3 )
+PYTHON := $(python3)
 PYTHONM := $($(PYTHON) -m)
 
 test:
