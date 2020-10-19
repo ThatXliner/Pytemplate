@@ -7,13 +7,18 @@ Long description.
 """
 from typing import List
 
-from .sub_module import *  # noqa
+
+# from .sub_module import *  # noqa
+
+# Do the above ONLY when:
 
 # sub_module is required to have an __all__ variable declared
 # The reason for this is that the package root directory __init__.py
 # should not declare an __all__ variable due to code style.
 # It would make it easier to maintain: nobody wants to update the
 # __init__.py every single time there is a new conponent.
+
+# BECAUSE:
 
 # But, from sub_module import * should only be used if the
 # implementation is split across files. Otherwise, we do nothing
