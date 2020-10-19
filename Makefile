@@ -4,6 +4,7 @@ PROJECT_NAME := package_name
 
 test:
 	@$(PYTHONM) pytest tests/ -vvv --durations=3
+	@$(PYTHON) setup.py sdist bdist_wheel
 deps:
 	@$(PYTHONM) ensurepip
 	@echo "Installing dependencies..."
