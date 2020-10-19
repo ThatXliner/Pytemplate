@@ -20,7 +20,7 @@ REPO = f"https://github.com/{USERNAME}/{PACKAGE}"
 # The text of the README file
 README = (HERE / "README.md").read_text()
 REQUIREMENTS = (HERE / "requirements.txt").read_text().split("\n")
-# Pinned (i.e. requirements for reproducible builds) should be in pin-req.txt
+# Pinned (i.e. requirements for pytest) should be in pin-req.txt
 DESC = "Short description shown on Pypi."
 
 CLASSIFIERS = [
