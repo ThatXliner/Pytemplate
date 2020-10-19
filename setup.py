@@ -53,7 +53,7 @@ setuptools.setup(
     long_description=README,
     project_urls={"Source Code": REPO, "Tracker": f"{REPO}/issues"},
     packages=setuptools.find_packages(exclude=["tests"], include=os.listdir(str(Path("src")))),
-    package_dir = {'': 'src'}
+    package_dir = {'': 'src'},
     # py_modules=["path/to/the/single/file"],
     classifiers=CLASSIFIERS,
     setup_requires=["wheel"],
