@@ -5,6 +5,7 @@
 from pathlib import Path
 
 import setuptools
+import os
 
 from src.package_name import __author__, __contact__, __version__
 
@@ -19,6 +20,7 @@ REPO = f"https://github.com/{USERNAME}/{PACKAGE}"
 # The text of the README file
 README = (HERE / "README.md").read_text()
 REQUIREMENTS = (HERE / "requirements.txt").read_text().split("\n")
+# Pinned (i.e. requirements for reproducible builds) should be in pin-req.txt
 DESC = "Short description shown on Pypi."
 
 CLASSIFIERS = [
@@ -28,7 +30,7 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: Implementation :: CPython",
-    "Programming Language :: Python :: Implementation :: PyPy",
+    "Programming Language :: Python :: Implementation :: PyPy",  # Optional support
     "Programming Language :: Python :: 3 :: Only",
     #     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
@@ -50,13 +52,15 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     long_description=README,
     project_urls={"Source Code": REPO, "Tracker": f"{REPO}/issues"},
-    packages=setuptools.find_packages(exclude=["tests"], include=["src"]),
+    packages=setuptools.find_packages(exclude=["tests"], include=os.listdir(str(Path("src")))),
+    package_dir = {'': 'src'}
     # py_modules=["path/to/the/single/file"],
     classifiers=CLASSIFIERS,
-    python_requires=">=3.6",
-    include_package_data=True,
+    setup_requires=["wheel"],
+    python_requires=">=3.6",  # This project supports python >=3.6 < 4
+    include_package_data=True,  # To include paths specified in MANIFEST.ini
     install_requires=[line for line in REQUIREMENTS if not line.startswith("#")],
-    # scripts=["bin/package_name_script"],
+    # scripts=[os.listdir(str(Path("bin")))],
     # entry_points={"console_scripts": ["package_name=package_name.__main__:_main"]},
     # keywords="",
 )
