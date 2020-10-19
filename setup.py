@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 # type: ignore
 """To setup."""
+import os
 from pathlib import Path
 
 import setuptools
-import os
 
 from src.package_name import __author__, __contact__, __version__
 
