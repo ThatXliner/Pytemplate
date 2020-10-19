@@ -7,12 +7,8 @@ Long description.
 """
 from typing import List
 
-# But, from sub_module import * should only be used if the
-# implementation is split across files. Otherwise, we do nothing
-# The reason for this is that if it makes sense to categorize
-# module-level APIs into different files.
-# But if they are submodules, you should do
-from . import sub_module
+
+from . import sub_module  # noqa: F401
 
 # from .sub_module import *  # noqa
 
@@ -24,7 +20,10 @@ from . import sub_module
 # It would make it easier to maintain: nobody wants to update the
 # __init__.py every single time there is a new conponent.
 
-# BECAUSE:
+# But, from sub_module import * should only be used if the
+# implementation is split across files. Otherwise, we do nothing
+# The reason for this is that if it makes sense to categorize
+# module-level APIs into different files.
 
 
 __title__: str = "package_name"  # The name of the package
