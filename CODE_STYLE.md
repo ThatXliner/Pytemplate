@@ -2,6 +2,8 @@
 
 This is a guideline that describes more specific parts of the code style used in this project.
 
+**NOTICE:** This file *will* be migrated to [ThatXliner/Significant-files](https://github.com/ThatXliner/Significant-files)
+
 ## Python
 
 
