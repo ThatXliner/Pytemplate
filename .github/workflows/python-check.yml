@@ -60,6 +60,9 @@ jobs:
       - name: Test with pytest
         run: |
           make test
+          pwd
+          cd Pytemplate
+          make build
   "pytest-MacOS":
     strategy:
       matrix:
@@ -112,6 +115,9 @@ jobs:
       - name: Test with pytest
         run: |
           make test
+          pwd
+          cd Pytemplate
+          make build
   "pytest-Windows":
     strategy:
       matrix:
@@ -155,4 +161,5 @@ jobs:
       - name: Test with pytest
         run: |
           python -m pytest tests/ -vvv --durations=3
+          cd Pytemplate
           python setup.py sdist bdist_wheel
