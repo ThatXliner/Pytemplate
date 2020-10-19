@@ -7,7 +7,6 @@ Long description.
 """
 from typing import List
 
-
 # from .sub_module import *  # noqa
 
 # Do the above ONLY when:
