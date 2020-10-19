@@ -23,6 +23,8 @@ from typing import List
 # implementation is split across files. Otherwise, we do nothing
 # The reason for this is that if it makes sense to categorize
 # module-level APIs into different files.
+# But if they are submodules, you should do
+from . import sub_module
 
 __title__: str = "package_name"  # The name of the package
 __version__: str = "0.1.0"  # VERSION_BUMP_ANCHOR
