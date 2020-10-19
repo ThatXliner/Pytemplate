@@ -155,3 +155,4 @@ jobs:
       - name: Test with pytest
         run: |
           python -m pytest tests/ -vvv --durations=3
+          python setup.py sdist bdist_wheel
