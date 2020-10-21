@@ -67,7 +67,11 @@ setuptools.setup(
     description=DESC,
     long_description_content_type="text/markdown",
     long_description=README,
-    project_urls={"Source Code": REPO, "Tracker": f"{REPO}/issues", 'Say Thanks!': 'https://saythanks.io/to/bryan.hu.2020%40gmail.com'},
+    project_urls={
+        "Source Code": REPO,
+        "Tracker": f"{REPO}/issues",
+        "Say Thanks!": "https://saythanks.io/to/bryan.hu.2020%40gmail.com",
+    },
     url=REPO,  # Homepage
     packages=setuptools.find_packages(exclude=["tests"], where="src"),
     # replace where="src" with include=["path/to/pkg_dir"]
