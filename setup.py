@@ -53,7 +53,7 @@ setuptools.setup(
     long_description=README,
     project_urls={"Source Code": REPO, "Tracker": f"{REPO}/issues"},
     packages=setuptools.find_packages(
-        exclude=["tests"], where="src")
+        exclude=["tests"], where="src"
     ),
     # replace where="src" with include=["path/to/pkg_dir"]
     # if you have packages/modules elsewhere (you shouldn't)
