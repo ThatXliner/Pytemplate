@@ -7,7 +7,16 @@ from pathlib import Path
 
 import setuptools
 
-from src.package_name import __author__, __contact__, __version__
+try:
+    from src.package_name import __author__, __contact__, __version__
+except ModuleNotFoundError:
+    try:
+        import regex as re
+    except ModuleNotFoundError:
+        import re
+        __version__ ,= re.findall('__version__ = "(.*)"', open('src/package_name/__init__.py').read())
+        __author__ , = re.findall('__author__ = "(.*)"', open('src/package_name/__init__.py').read()) 
+        __contact__ ,= re.findall('__contact__ = "(.*)"', open('src/package_name/__init__.py').read())
 
 # The directory containing this file
 HERE = Path(__file__).parent
