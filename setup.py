@@ -14,9 +14,16 @@ except ModuleNotFoundError:
         import regex as re
     except ModuleNotFoundError:
         import re
-        __version__ ,= re.findall('__version__ = "(.*)"', open('src/package_name/__init__.py').read())
-        __author__ , = re.findall('__author__ = "(.*)"', open('src/package_name/__init__.py').read()) 
-        __contact__ ,= re.findall('__contact__ = "(.*)"', open('src/package_name/__init__.py').read())
+
+        (__version__,) = re.findall(
+            '__version__ = "(.*)"', open("src/package_name/__init__.py").read()
+        )
+        (__author__,) = re.findall(
+            '__author__ = "(.*)"', open("src/package_name/__init__.py").read()
+        )
+        (__contact__,) = re.findall(
+            '__contact__ = "(.*)"', open("src/package_name/__init__.py").read()
+        )
 
 # The directory containing this file
 HERE = Path(__file__).parent
