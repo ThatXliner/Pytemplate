@@ -52,14 +52,15 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     long_description=README,
     project_urls={"Source Code": REPO, "Tracker": f"{REPO}/issues"},
-    packages=setuptools.find_packages(
-        exclude=["tests"], where="src"
-    ),
+    packages=setuptools.find_packages(exclude=["tests"], where="src"),
     # replace where="src" with include=["path/to/pkg_dir"]
     # if you have packages/modules elsewhere (you shouldn't)
     package_dir={"": "src"},
     classifiers=CLASSIFIERS,
-    setup_requires=["wheel", "ssetuptools"],  # or flit/hatch if you use them... see ISSUE#10
+    setup_requires=[
+        "wheel",
+        "ssetuptools",
+    ],  # or flit/hatch if you use them... see ISSUE#10
     python_requires=">=3.6",  # This project supports python >=3.6 < 4
     include_package_data=True,  # To include paths specified in MANIFEST.ini
     install_requires=[line for line in REQUIREMENTS if not line.startswith("#")],
