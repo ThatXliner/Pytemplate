@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # type: ignore
 """To setup."""
-import os
+
 from pathlib import Path
 
 import setuptools
@@ -48,7 +48,7 @@ CLASSIFIERS = [
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",  # Optional support
     "Programming Language :: Python :: 3 :: Only",
-    #     "License :: OSI Approved :: MIT License",
+    # "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Development Status :: 3 - Alpha",
     "Natural Language :: English",
@@ -67,7 +67,8 @@ setuptools.setup(
     description=DESC,
     long_description_content_type="text/markdown",
     long_description=README,
-    project_urls={"Source Code": REPO, "Tracker": f"{REPO}/issues"},
+    project_urls={"Source Code": REPO, "Tracker": f"{REPO}/issues", 'Say Thanks!': 'https://saythanks.io/to/bryan.hu.2020%40gmail.com'},
+    url=REPO,  # Homepage
     packages=setuptools.find_packages(exclude=["tests"], where="src"),
     # replace where="src" with include=["path/to/pkg_dir"]
     # if you have packages/modules elsewhere (you shouldn't)
