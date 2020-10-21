@@ -154,6 +154,8 @@ jobs:
         run: |
           python -m pip install --no-warn-script-location --upgrade pip wheel setuptools
           python -m pip install  --no-warn-script-location -r pin-req.txt -r pytest-requirements.txt
+      - name: Run OS-indepentant scripts
+        run: pathman /ru C:\hostedtoolcache\windows\Python\3.9.0\x64\Scripts  || echo "it failed. 😬"
       - name: Test with pytest
         run: |
           python -m pytest tests/ -vvv --durations=3
