@@ -68,7 +68,7 @@ setuptools.setup(
     classifiers=CLASSIFIERS,
     setup_requires=[
         "wheel",
-        "ssetuptools",
+        "setuptools",
     ],  # or flit/hatch if you use them... see ISSUE#10
     python_requires=">=3.6",  # This project supports python >=3.6 < 4
     include_package_data=True,  # To include paths specified in MANIFEST.ini
