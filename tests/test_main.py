@@ -16,7 +16,7 @@ from pathlib import Path
 
 import pytest  # noqa
 
-sys.path.insert(0, str(Path(Path(Path(__file__).parent).parent / "src")))
+sys.path.insert(0, str(Path(Path(__file__).parent.parent / "src")))
 import package_name
 
 
