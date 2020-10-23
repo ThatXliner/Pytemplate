@@ -9,7 +9,8 @@ import setuptools
 
 try:
     from src.package_name import __author__, __contact__, __version__
-except ModuleNotFoundError:  # package_name imports a dependancy which is imported in the __init__.py
+except ModuleNotFoundError:
+    # package_name imports a dependancy which is imported in the __init__.py
     try:
         import regex as re
     except ModuleNotFoundError:
@@ -18,16 +19,10 @@ except ModuleNotFoundError:  # package_name imports a dependancy which is import
         VERSION_RE, AUTHOR_RE, CONTACT_RE = (
             f'__{type}__ = "(.*)"' for type in ["version", "author", "contact"]
         )
-
-        (__version__,) = re.findall(
-            VERSION_RE, open("src/package_name/__init__.py").read()
-        )
-        (__author__,) = re.findall(
-            AUTHOR_RE, open("src/package_name/__init__.py").read()
-        )
-        (__contact__,) = re.findall(
-            CONTACT_RE, open("src/package_name/__init__.py").read()
-        )
+        INIT_PY = open("src/package_name/__init__.py").read()
+        (__version__,) = re.findall(VERSION_RE, INIT_PY)
+        (__author__,) = re.findall(AUTHOR_RE, INIT_PY)
+        (__contact__,) = re.findall(CONTACT_RE, INIT_PY)
 
 # The directory containing this file
 HERE = Path(__file__).parent
@@ -40,7 +35,8 @@ REPO = f"https://github.com/{USERNAME}/{PACKAGE}"
 # The text of the README file
 README = (HERE / "README.md").read_text()
 REQUIREMENTS = (HERE / "requirements.txt").read_text().split("\n")
-# Pinned (i.e. requirements for pytest) should be in pin-req.txt
+# If it's special (e.g. different on python versions) than replace this with a list
+
 DESC = "Short description shown on Pypi."
 
 CLASSIFIERS = [

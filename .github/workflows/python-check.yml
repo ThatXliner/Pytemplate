@@ -43,11 +43,11 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/pin-req.txt', '**/pytest-requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/pin-req.txt', '**/pytest-requirements.txt') }}-2
-            ${{ runner.os }}-pip-${{ hashFiles('**/pin-req.txt') }}
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}-2
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
             ${{ runner.os }}-pip-${{ hashFiles('**/pytest-requirements.txt') }}
             ${{ runner.os }}-pip-key
             ${{ runner.os }}-
@@ -56,7 +56,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip wheel setuptools
-          python3 -m pip install -r pin-req.txt -r pytest-requirements.txt
+          python3 -m pip install -r requirements.txt -r pytest-requirements.txt
       - name: Test with pytest
         run: |
           make test
@@ -96,11 +96,11 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~/Library/Caches/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/pin-req.txt', '**/pytest-requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/pin-req.txt', '**/pytest-requirements.txt') }}-2
-            ${{ runner.os }}-pip-${{ hashFiles('**/pin-req.txt') }}
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}-2
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
             ${{ runner.os }}-pip-${{ hashFiles('**/pytest-requirements.txt') }}
             ${{ runner.os }}-pip-key
             ${{ runner.os }}-
@@ -109,7 +109,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip wheel setuptools
-          python3 -m pip install -r pin-req.txt -r pytest-requirements.txt
+          python3 -m pip install -r requirements.txt -r pytest-requirements.txt
       - name: Test with pytest
         run: |
           make test
@@ -140,11 +140,11 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ~\AppData\Local\pip\Cache
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/pin-req.txt', '**/pytest-requirements.txt') }}
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}
           restore-keys: |
             ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/pin-req.txt', '**/pytest-requirements.txt') }}-2
-            ${{ runner.os }}-pip-${{ hashFiles('**/pin-req.txt') }}
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}-2
+            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
             ${{ runner.os }}-pip-${{ hashFiles('**/pytest-requirements.txt') }}
             ${{ runner.os }}-pip-key
             ${{ runner.os }}-
@@ -153,7 +153,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --no-warn-script-location --upgrade pip wheel setuptools
-          python -m pip install  --no-warn-script-location -r pin-req.txt -r pytest-requirements.txt
+          python -m pip install  --no-warn-script-location -r requirements.txt -r pytest-requirements.txt
       - name: Run OS-indepentant scripts
         run: setx path "%path%;C:\hostedtoolcache\windows\Python\3.9.0\x64\Scripts"
       - name: Test with pytest
