@@ -14,7 +14,10 @@ except ModuleNotFoundError:  # package_name imports a dependancy which is import
         import regex as re
     except ModuleNotFoundError:
         import re
-        VERSION_RE, AUTHOR_RE, CONTACT_RE = (f'__{type}__ = "(.*)"' for type in ["version", "author", "contact"])
+
+        VERSION_RE, AUTHOR_RE, CONTACT_RE = (
+            f'__{type}__ = "(.*)"' for type in ["version", "author", "contact"]
+        )
 
         (__version__,) = re.findall(
             VERSION_RE, open("src/package_name/__init__.py").read()
