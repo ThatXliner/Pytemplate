@@ -92,7 +92,7 @@ TODO: Add GFM emoji shortcuts
 
 **Efficiency, speed, etc:**
 
-- :battery:(`:battery:`) or ⚡️ or 🏃‍♀️ or 🏃 or 🏃‍♂️: Increased speed
+- :battery:(`:battery:`) or :zap:(`:zap:`) or 🏃‍♀️ or 🏃 or 🏃‍♂️: Increased speed
 
 **Idea related emojis:**
 
@@ -109,7 +109,7 @@ TODO: Add GFM emoji shortcuts
 **Miscellaneous emojis:**
 
 - :robot:(`:robot:`): Bot-created commit
-- 👨 or 🧔: Travis CI related commit
+- :man:(`:man:`) or 🧔: Travis CI related commit
 - :octocat: (`:octocat:`): GitHub-related commit
 - :package: (`:package:`): A packing-related commit
 Example Git commit message:
