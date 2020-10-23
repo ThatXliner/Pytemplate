@@ -9,20 +9,21 @@ import setuptools
 
 try:
     from src.package_name import __author__, __contact__, __version__
-except ModuleNotFoundError:
+except ModuleNotFoundError:  # package_name imports a dependancy which is imported in the __init__.py
     try:
         import regex as re
     except ModuleNotFoundError:
         import re
+        VERSION_RE, AUTHOR_RE, CONTACT_RE = (f'__{type}__ = "(.*)"' for type in ["version", "author", "contact"])
 
         (__version__,) = re.findall(
-            '__version__ = "(.*)"', open("src/package_name/__init__.py").read()
+            VERSION_RE, open("src/package_name/__init__.py").read()
         )
         (__author__,) = re.findall(
-            '__author__ = "(.*)"', open("src/package_name/__init__.py").read()
+            AUTHOR_RE, open("src/package_name/__init__.py").read()
         )
         (__contact__,) = re.findall(
-            '__contact__ = "(.*)"', open("src/package_name/__init__.py").read()
+            CONTACT_RE, open("src/package_name/__init__.py").read()
         )
 
 # The directory containing this file
@@ -64,13 +65,14 @@ setuptools.setup(
     version=__version__,
     author=__author__,
     author_email=__contact__,
+    license="GNU GPLv3",
     description=DESC,
     long_description_content_type="text/markdown",
     long_description=README,
     project_urls={
         "Source Code": REPO,
         "Tracker": f"{REPO}/issues",
-        "Say Thanks!": "https://saythanks.io/to/bryan.hu.2020%40gmail.com",
+        "Say Thanks!": f"https://saythanks.io/to/{__contact__}",  # If possible
     },
     url=REPO,  # Homepage
     packages=setuptools.find_packages(exclude=["tests"], where="src"),
@@ -86,7 +88,7 @@ setuptools.setup(
     include_package_data=True,  # To include paths specified in MANIFEST.ini
     install_requires=[line for line in REQUIREMENTS if not line.startswith("#")],
     # py_modules=["path/to/the/single/file"],
-    # scripts=[os.listdir(str(Path("bin")))],
+    # scripts=[os.listdir(str(Path("bin")))],  # Recommended to use entry_points instead
     # entry_points={"console_scripts": ["package_name=package_name.__main__:_main"]},
     # keywords="",
 )
