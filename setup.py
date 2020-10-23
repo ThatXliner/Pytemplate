@@ -76,6 +76,7 @@ setuptools.setup(
         "Source Code": REPO,
         "Tracker": f"{REPO}/issues",
         "Say Thanks!": f"https://saythanks.io/to/{__contact__}",  # If possible
+        "Travis CI": f"https://travis-ci.com/github/{USERNAME}/{PACKAGE}"
     },
     url=REPO,  # Homepage
     packages=setuptools.find_packages(exclude=["tests"], where="src"),
