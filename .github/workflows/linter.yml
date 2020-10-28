@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [master]
 jobs:
-  "flake8":
+  "Flake8":
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -23,7 +23,7 @@ jobs:
         run: |
           # stop the build if there are Python syntax errors or undefined names
           python3 -m flake8 .
-  "mypy":
+  "MyPy":
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -39,3 +39,8 @@ jobs:
         run: |
           python3 -m mypy src
           [ -d ./bin ] && python3 -m mypy bin || echo "No .pyi files found in /bin"
+  "Bandit":
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: jpetrucciani/bandit-check@master
