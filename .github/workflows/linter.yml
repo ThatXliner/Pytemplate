@@ -20,9 +20,7 @@ jobs:
           python3 -m pip install --upgrade pip flake8 wheel setuptools
           python3 -m pip install -r requirements.txt
       - name: Lint with flake8
-        run: |
-          # stop the build if there are Python syntax errors or undefined names
-          python3 -m flake8 .
+        run: python3 -m flake8 .
   "MyPy":
     runs-on: ubuntu-latest
     steps:
@@ -34,13 +32,45 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip mypy -r requirements.txt
-      - name: Mypy
+          python3 -m pip install --upgrade pip mypy wheel setuptools
+          python3 -m pip install -r requirements.txt
+      - name: Lint with MyPy
         run: |
           python3 -m mypy src
           [ -d ./bin ] && python3 -m mypy bin || echo "No .pyi files found in /bin"
   "Bandit":
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version:  # 3.6 to 3.9
+         - "3.9.0"
+         - "3.8.5"
+         - "3.8.4"
+         - "3.8.3"
+         - "3.8.2"
+         - "3.8.1"
+         - "3.8.0"
+         - "3.7.9"
+         - "3.7.8"
+         - "3.7.7"
+         - "3.7.6"
+         - "3.7.5"
+         - "3.6.12"
+         - "3.6.11"
+         - "3.6.10"
+         - "3.6.9"
+         - "3.6.8"
+         - "3.6.7"
     steps:
       - uses: actions/checkout@v2
-      - uses: jpetrucciani/bandit-check@master
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+          architecture: 'x64'
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip bandit wheel setuptools
+          python3 -m pip install -r requirements.txt
+      - name: Lint with Bandit
+        run: bandit -r .
