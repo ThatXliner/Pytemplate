@@ -34,8 +34,7 @@ def factorial(number: int) -> int:
     """
     if number < 1:
         return 1
-    else:
-        return number * factorial(number - 1)
+    return number * factorial(number - 1)
 
 
 def multiply_all(some_iter: Iterable[AnyNum]) -> AnyNum:
