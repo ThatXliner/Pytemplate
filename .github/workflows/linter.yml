@@ -88,4 +88,4 @@ jobs:
         - name: Install Pylint
           run: python3 -m pip install wheel pylint
         - name: Lint with Pylint
-          run: python3 -m pylint src/**.py
+          run: python3 -m pylint **/**.py
