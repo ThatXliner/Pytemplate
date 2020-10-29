@@ -86,6 +86,8 @@ jobs:
           with:
             python-version: "3.9.0"
         - name: Install Pylint
-          run: python3 -m pip install wheel pylint
+          run: |
+            python3 -m pip install wheel pylint
+            python3 -m pip install -r requirements.txt
         - name: Lint with Pylint
           run: python3 -m pylint **/**.py
