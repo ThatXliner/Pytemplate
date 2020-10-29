@@ -90,4 +90,4 @@ jobs:
             python3 -m pip install wheel pylint
             python3 -m pip install -r requirements.txt
         - name: Lint with Pylint
-          run: python3 -m pylint **/**.py
+          run: python3 -m pylint src/**
