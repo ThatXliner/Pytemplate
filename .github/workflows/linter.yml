@@ -72,6 +72,8 @@ jobs:
         - uses: actions/setup-python@v2
           with:
             python-version: "3.9.0"
-        - uses: jamescurtin/isort-action@master
-          with:
-              requirementsFiles: "requirements.txt"
+        - name: Install Isort
+          run: |
+            python3 -m pip install isort[requirements_deprecated_finder]
+        - name: Lint with Isort
+          run: python3 -m isort --check-only --diff .
