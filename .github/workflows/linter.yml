@@ -56,22 +56,12 @@ jobs:
   "Black":  # For formatting python files
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
+      - uses: actions/checkout@v2
       - name: Set up Python 3.9
         uses: actions/setup-python@v2
         with:
           python-version: "3.9.0"
-
-      - name: Install black
-        run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install black
-
-      # The fun stuff
-      - name: Blacken
-        run: python3 -m black .
+      - uses: psf/black@stable
 
   "Isort":
       runs-on: ubuntu-latest
@@ -79,11 +69,9 @@ jobs:
         - name: Checkout code
           uses: actions/checkout@v2
 
-        - name: Install isort
-          run: |
-            python3 -m pip install --upgrade pip
-            python3 -m pip install isort
-
-        # The fun stuff
-        - name: Isort
-          run: python3 -m isort .
+        - uses: actions/setup-python@v2
+          with:
+            python-version: "3.9.0"
+        - uses: jamescurtin/isort-action@master
+          with:
+              requirementsFiles: "requirements.txt"
