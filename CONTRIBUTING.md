@@ -37,12 +37,10 @@ It is recommended to stick to one constuct in a commit message: either completel
 Inspired by [gitmoji](https://gitmoji.carloscuesta.me) and @t9md's [emoji convention](https://github.com/t9md/atom-vim-mode-plus#commit-emoji-convention)
 
 **Dependency related emojis:**
-
 - :arrow_up:(`:arrow_up`): Increased dependencies
 - :arrow_down:(`:arrow_down`): Decreased dependencies
 
 **File related emojis:**
-
 - :fire:(`:fire:`): Removed files/code/features
 - :memo: (`:memo:`): Added/edited files
 - Formatting:
@@ -51,24 +49,20 @@ Inspired by [gitmoji](https://gitmoji.carloscuesta.me) and @t9md's [emoji conven
   * :black_circle:(`:black_circle:`): Blackened (a blackening commit)
 
 **Feature related emojis:**
-
 - :sparkles:(`:sparkles:`): New feature
 - :wastebasket:(`:wastebasket:`): Deprecate code
 - :bomb:(`:bomb:`): Introduce breaking changes
 
 **OS dependent emojis:**
-
 - :apple:(`:apple:`): MacOS related commit
 - :penguin:(`:penguin:`): Linux related commit
 - :computer:(`:computer:`): Windows related commit
 
 **Bug related emojis:**
-
 - :bug:(`:bug:`): Fixed a bug
 - :warning:(`:warning:`): Possibly introduced a bug
 
 **Efficiency, speed, etc:**
-
 - :zap:(`:zap:`): Increased speed/performance
 
 **CI related emojis:**
@@ -77,11 +71,18 @@ Inspired by [gitmoji](https://gitmoji.carloscuesta.me) and @t9md's [emoji conven
 - :construction_worker:(`:construction_worker:`): Add/update CI system
 - :green_heart:(`:green_heart:`): Fixed CI build
 - :robot:(`:robot:`): Bot-created commit
+- :lock:(`:lock:`): Fix security issues
+- :white_check_mark:(`:white_check_mark:`): Add/update tests
 
-**Miscellaneous emojis:**
+**Meta emojis:**
 - :wrench:(`:wrench:`): Add/Update configuration file(s)
 - :package: (`:package:`): A packaging-related commit
 - :tada:(`:tada:`): Initial commit
+
+**Documentation related emojis:**
+- :book:(`:book:`): Add/update docs (whether it's comments, docstrings, or RST)
+
+**Miscellaneous emojis:**
 - :alien:(`:alien:`): Update code due to external changes
 
 
