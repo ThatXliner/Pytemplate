@@ -30,11 +30,9 @@ If the commit was made by a robot, you should prefix it with a <code>:robot:|:so
 
 If there's a `[skip ci]` message, put it in the description (i.e., two lines below the title)
 
-#### Commit message emojis and meaning
+#### Commit message emojis and meaning.
 
-NOTICE: Any emoji specified here _are **not**_ only limited to only one skin tone: This list just includes one for simplicity. Also, **it is preferred to use Github flavored markdown emoji shortcuts for it will automatically take care of different encoding schemes et cetera. If there are more shortcuts not listed here, let me know.** [Contact me](#owner-thatxliner-bryan-hu).
-
-It is recommended to stick to one constuct in a commit message: either completely use [**GFM emoji shortcuts**](https://gist.github.com/rxaviers/7360908 "Complete list of github markdown emoji markup") or use Unicode emojis.
+It is recommended to stick to one constuct in a commit message: either completely use [**GFM emoji shortcuts**](https://gist.github.com/rxaviers/7360908 "Complete list of github markdown emoji markup") or use Unicode emojis. **Limit the emojis up to 5 per commit title.**
 
 Inspired by [gitmoji](https://gitmoji.carloscuesta.me) and @t9md's [emoji convention](https://github.com/t9md/atom-vim-mode-plus#commit-emoji-convention)
 
@@ -83,6 +81,8 @@ Inspired by [gitmoji](https://gitmoji.carloscuesta.me) and @t9md's [emoji conven
 **Miscellaneous emojis:**
 - :wrench:(`:wrench:`): Add/Update configuration file(s)
 - :package: (`:package:`): A packaging-related commit
+- :tada:(`:tada:`): Initial commit
+- :alien:(`:alien:`): Update code due to external changes
 
 
 Example Git commit message:
