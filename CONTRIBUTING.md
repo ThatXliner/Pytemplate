@@ -22,33 +22,13 @@ I must admit, I personally don't like to write detailed commit messages. But now
 
 #### General convention
 
-For git commit messages, it is recommended to write them in past tense (e.g. `Added`, `Updated`) and with `Title Case`.
+For git commit messages, it is preferreed to write actions in past tense (e.g. `Added`, `Updated`) and with `Title Case`.
 
-Also, *try* to add emojis as needed. **You don't *need* to.** See [below](#commit-message-emojis-and-meaning). After that, you'd want to seperate the emojis with the actual commit message. You can do so like this (where you replace `*example emoji*` with the emojis required):
-
-```
-*example emoji*: Added Example_file.txt
-
-Why and where. [skip ci]
-```
-
-OR
-
-```
-*example emoji* -> Added Example_file.txt
-
-Why and where. [skip ci]
-```
-
-OR
-
-```
-*example emoji* - Added Example_file.txt
-
-Why and where. [skip ci]
-```
+Try to add emojis in your commits. They make it more fun to read :smile:. See the [commit emoji guide](#commit-message-emojis-and-meaning).
 
 If the commit was made by a robot, you should prefix it with a <code>:robot:|:some_other_emoji:</code>
+
+If there's a `[skip ci]` message, put it in the description (i.e., two lines below the title)
 
 #### Commit message emojis and meaning
 
@@ -56,7 +36,7 @@ NOTICE: Any emoji specified here _are **not**_ only limited to only one skin ton
 
 It is recommended to stick to one constuct in a commit message: either completely use [**GFM emoji shortcuts**](https://gist.github.com/rxaviers/7360908 "Complete list of github markdown emoji markup") or use Unicode emojis.
 
-TODO: Add GFM emoji shortcuts
+Inspired by [gitmoji](https://gitmoji.carloscuesta.me) and @t9md's [emoji convention](https://github.com/t9md/atom-vim-mode-plus#commit-emoji-convention)
 
 **Dependency related emojis:**
 
@@ -65,11 +45,10 @@ TODO: Add GFM emoji shortcuts
 
 **File related emojis:**
 
-- :fire:(`:fire:`): Removed files
-- :memo: (`:memo:` or `:pencil:`): Added files
-- :pencil2: (`:pencil2:`): Edited files
-- :art:(`:art:`) or :sparkles:(`:sparkles:`) or :star2:(`:star2:`) or :star:(`:star`): Beautified file
-  - ⚫️: Beautified with black
+- :fire:(`:fire:`): Removed files/code/features
+- :memo: (`:memo:`): Added/edited files
+- :art:(`:art:`): Refactored/restructureed code
+- :black_circle: (`:black_circle:`): Blackened (a blackening commit)
 
 **OS dependent emojis:**
 
@@ -79,43 +58,26 @@ TODO: Add GFM emoji shortcuts
 
 **Bug related emojis:**
 
-- :white_check_mark:(`:white_check_mark:`) or :bug:(`:bug:`): Fixed a bug
-- :x:(`:x:`): Introduced a bug
-  Possibilities:
-- :warning: (`:warning:`) or :grimacing:(`:grimacing:`): Possibly introduced a bug
-- :cyclone:(`:cyclone:`): Possibly *fixed* a bug
-
-**Language-related emojis:**
-
-- :snake:(`:snake:`): Edited a python (or Python related) file.
-- 🦪 or :turtle:(`:turtle:`) or :green_circle:(`:green_circle:`): Edited a shell/bash (or shell/bash related) file.
+- :bug:(`:bug:`): Fixed a bug
+- :warning: (`:warning:`): Possibly introduced a bug
 
 **Efficiency, speed, etc:**
 
-- :battery:(`:battery:`) or :zap:(`:zap:`) or 🏃‍♀️ or 🏃 or 🏃‍♂️: Increased speed
+- :zap: (`:zap:`): Increased speed/performance
 
-**Idea related emojis:**
 
-- :thinking:(`:thinking:`): Possible idea
-- 💡: Idea
-- :zany_face:(`:zany_face:`): Crazy idea
-
-**General emojis:**
-
-- :+1:(`:+1:` or `:thumbsup:`): Good or yes or accept
-- :-1:(`:-1:` or `:thumbsdown:`): Bad or no or object
-- :handshake:(`:handshake:`): Agreement or compromise
 
 **Miscellaneous emojis:**
 
 - :robot:(`:robot:`): Bot-created commit
-- :man:(`:man:`) or 🧔: Travis CI related commit
-- :octocat: (`:octocat:`): GitHub-related commit
-- :package: (`:package:`): A packing-related commit
+- :man:(`:man:`): Travis CI related commit
+- :octocat: (`:octocat:`): GitHub(Actions)-related commit
+- :package: (`:package:`): A packaging-related commit
+
 Example Git commit message:
 
 ```
-:memo: :art: :black_circle: : Added __main__.py
+:memo: Added __main__.py
 ```
 
 ### Pull request messages
