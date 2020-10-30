@@ -18,8 +18,21 @@ Short description.
 	- [License](#license)
 
 <!-- /TOC -->
+<p align="center">
+	<a href="https://github.com/ThatXliner/Pytemplate/actions?query=workflow%3APythonCI">
+		<img src="https://github.com/ThatXliner/Pytemplate/workflows/PythonCI/badge.svg" alt="PythonCI"></a>
+	<a href="https://travis-ci.com/ThatXliner/Pytemplate">
+		<img src="https://travis-ci.com/ThatXliner/Pytemplate.svg?branch=master" alt="Build Status"></a> 
+	<a href="https://codecov.io/gh/ThatXliner/Pytemplate">
+		<img src="https://codecov.io/gh/ThatXliner/Pytemplate/branch/master/graph/badge.svg" alt="codecov"></a>
+	<a href="https://saythanks.io/to/bryan.hu.2020@gmail.com">
+		<img src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg" alt="Say Thanks!"></a>
+	<a href="https://github.com/PyCQA/bandit">
+		<img src="https://img.shields.io/badge/security-bandit-yellow.svg" alt="security: bandit"></a>
+	<a href="https://github.com/psf/black">
+		<img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black"></a>
+</p>
 
-[![PythonCI](https://github.com/ThatXliner/Pytemplate/workflows/PythonCI/badge.svg)](https://github.com/ThatXliner/Pytemplate/actions?query=workflow%3APythonCI) [![Build Status](https://travis-ci.com/ThatXliner/Pytemplate.svg?branch=master)](https://travis-ci.com/ThatXliner/Pytemplate) [![codecov](https://codecov.io/gh/ThatXliner/Pytemplate/branch/master/graph/badge.svg)](https://codecov.io/gh/ThatXliner/Pytemplate)[![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/bryan.hu.2020@gmail.com)[![security: bandit](https://img.shields.io/badge/security-bandit-yellow.svg)](https://github.com/PyCQA/bandit)[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 
 ## What is this?
