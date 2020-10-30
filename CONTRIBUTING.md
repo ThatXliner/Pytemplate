@@ -47,32 +47,43 @@ Inspired by [gitmoji](https://gitmoji.carloscuesta.me) and @t9md's [emoji conven
 
 - :fire:(`:fire:`): Removed files/code/features
 - :memo: (`:memo:`): Added/edited files
-- :art:(`:art:`): Refactored/restructureed code
-- :black_circle: (`:black_circle:`): Blackened (a blackening commit)
+- Formatting:
+  * :art:(`:art:`): Refactored/restructured code
+  * :poop:(`:poop:`): Written quick and dirty code that *will* be refactored
+  * :black_circle:(`:black_circle:`): Blackened (a blackening commit)
+
+**Feature related emojis:**
+
+- :sparkles:(`:sparkles:`): New feature
+- :wastebasket:(`:wastebasket:`): Deprecate code
+- :bomb:(`:bomb:`): Introduce breaking changes
 
 **OS dependent emojis:**
 
 - :apple:(`:apple:`): MacOS related commit
 - :penguin:(`:penguin:`): Linux related commit
-- :computer:(`:computer:`) or :desktop_computer:(`:desktop_computer:`): Windows related commit
+- :computer:(`:computer:`): Windows related commit
 
 **Bug related emojis:**
 
 - :bug:(`:bug:`): Fixed a bug
-- :warning: (`:warning:`): Possibly introduced a bug
+- :warning:(`:warning:`): Possibly introduced a bug
 
 **Efficiency, speed, etc:**
 
-- :zap: (`:zap:`): Increased speed/performance
+- :zap:(`:zap:`): Increased speed/performance
 
-
+**CI related emojis:**
+- :octocat: (`:octocat:`): GitHub(Actions)-related commit
+- :man:(`:man:`): Travis CI related commit
+- :construction_worker:(`:construction_worker:`): Add/update CI system
+- :green_heart:(`:green_heart:`): Fixed CI build
+- :robot:(`:robot:`): Bot-created commit
 
 **Miscellaneous emojis:**
-
-- :robot:(`:robot:`): Bot-created commit
-- :man:(`:man:`): Travis CI related commit
-- :octocat: (`:octocat:`): GitHub(Actions)-related commit
+- :wrench:(`:wrench:`): Add/Update configuration file(s)
 - :package: (`:package:`): A packaging-related commit
+
 
 Example Git commit message:
 
