@@ -34,7 +34,10 @@ If there's a `[skip ci]` message, put it in the description (i.e., two lines bel
 
 It is recommended to stick to one constuct in a commit message: either completely use [**GFM emoji shortcuts**](https://gist.github.com/rxaviers/7360908 "Complete list of github markdown emoji markup") or use Unicode emojis. **Limit the emojis up to 5 per commit title.**
 
-Inspired by [gitmoji](https://gitmoji.carloscuesta.me) and @t9md's [emoji convention](https://github.com/t9md/atom-vim-mode-plus#commit-emoji-convention)
+Use the [GitMoji](https://gitmoji.carloscuesta.me) convention.
+
+<!--
+Inspired by [GitMoji](https://gitmoji.carloscuesta.me) and @t9md's [emoji convention](https://github.com/t9md/atom-vim-mode-plus#commit-emoji-convention)
 
 **Dependency related emojis:**
 - :arrow_up:(`:arrow_up`): Increased dependencies
@@ -66,8 +69,9 @@ Inspired by [gitmoji](https://gitmoji.carloscuesta.me) and @t9md's [emoji conven
 - :zap:(`:zap:`): Increased speed/performance
 
 **CI related emojis:**
-- :octocat: (`:octocat:`): GitHub(Actions)-related commit
-- :man:(`:man:`): Travis CI related commit
+<!--- :octocat: (`:octocat:`): GitHub(Actions)-related commit -->
+<!-- - :man:(`:man:`): Travis CI related commit -->
+<!--
 - :construction_worker:(`:construction_worker:`): Add/update CI system
 - :green_heart:(`:green_heart:`): Fixed CI build
 - :robot:(`:robot:`): Bot-created commit
@@ -83,13 +87,20 @@ Inspired by [gitmoji](https://gitmoji.carloscuesta.me) and @t9md's [emoji conven
 - :book:(`:book:`): Add/update docs (whether it's comments, docstrings, or RST)
 
 **Miscellaneous emojis:**
-- :alien:(`:alien:`): Update code due to external changes
+- :alien:(`:alien:`): Update code due to external changes -->
 
 
 Example Git commit message:
 
 ```
-:memo: Added __main__.py
+Added __main__.py
+```
+
+No Emoji required here.
+
+But you *can* here:
+```
+:black_circle: Blackened code
 ```
 
 ### Pull request messages
