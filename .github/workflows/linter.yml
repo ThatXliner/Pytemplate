@@ -1,10 +1,6 @@
 name: linter
 
-on:
-  push:
-    branches: [master]
-  pull_request:
-    branches: [master]
+on: [push, pull_request]
 jobs:
   "Flake8":
     runs-on: ubuntu-latest
