@@ -11,12 +11,11 @@ jobs:
         with:
           python-version: "3.9.0"
 
-      - name: Install dependencies
-        run: |
-          python3 -m pip install --upgrade pip flake8 wheel setuptools
-          python3 -m pip install -r requirements.txt
-      - name: Lint with flake8
-        run: python3 -m flake8 .
+      - name: Run flake8
+        uses: julianwachholz/flake8-action@v1.1.0
+        with:
+          checkName: "Python Lint"
+          path: .
   "MyPy":
     runs-on: ubuntu-latest
     steps:
