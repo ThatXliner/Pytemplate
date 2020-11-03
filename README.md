@@ -53,18 +53,23 @@ Here's the complete installation script:
 
 ```bash
 /usr/bin/git clone https://github.com/ThatXliner/package_name.git
-/bin/bash cd package_root_folder_name
-/usr/bin/pip3 install .
-/usr/bin/python3 -m pip install .
+cd package_root_folder_name
+/usr/bin/pip3 install . || /usr/bin/python3 -m pip install .
 ```
 
 or, a one-liner installation script:
 
 ```bash
-/usr/bin/git clone https://github.com/ThatXliner/package_name.git && /bin/bash cd package_root_folder_name && /usr/bin/pip3 install . ; /usr/bin/python3 -m pip install .
+/usr/bin/git clone https://github.com/ThatXliner/package_name.git && cd package_root_folder_name && /usr/bin/pip3 install . || /usr/bin/python3 -m pip install .
 ```
 
-**NOTE: If you don't have `pip` or `/usr/bin/pip` or `/usr/bin/pip3` and have tried `/usr/bin/python3 -m pip`, you will need to install pip. See [here](#getting-pip) to find out how to get pip.**
+But, you can make pip do all of this by doing:
+
+```bash
+/usr/bin/python3 -m pip install git+https://github.com/ThatXliner/Pytemplate.git
+```
+
+**NOTE: If you don't have `pip` or `/usr/bin/pip` or `/usr/bin/pip3` (and have tried `/usr/bin/python3 -m pip`), you will need to install pip. See [here](#getting-pip) to find out how to get pip.**
 
 ### via `pip install` (recommended)
 
@@ -107,6 +112,7 @@ OR, as a last resort:
 ```bash
 {/usr/bin/curl https://bootstrap.pypa.io/get-pip.py | /usr/bin/python3} || {wget https://bootstrap.pypa.io/get-pip.py | /usr/bin/python3} ||  {/usr/bin/curl https://bootstrap.pypa.io/get-pip.py | /usr/bin/python} ||  {wget https://bootstrap.pypa.io/get-pip.py | /usr/bin/python}
 ```
+
 
 ## License
 
