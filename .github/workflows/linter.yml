@@ -60,9 +60,8 @@ jobs:
         - name: Install isort
           run: |
             python3 -m pip install isort
-        - uses: jamescurtin/isort-action@master
-          with:
-            requirementsFiles: "requirements.txt"
+        - name: Lint with Isort
+          run: python3 -m isort . --check --diff
   "Pylint":
     runs-on: ubuntu-latest
     steps:
