@@ -11,12 +11,11 @@ jobs:
         with:
           python-version: "3.9.0"
 
-      - name: Install dependencies
-        run: |
-          python3 -m pip install --upgrade pip flake8 wheel setuptools
-          python3 -m pip install -r requirements.txt
-      - name: Lint with flake8
-        run: python3 -m flake8 .
+      - name: Run flake8
+        uses: julianwachholz/flake8-action@v1.1.0
+        with:
+          checkName: "Python Lint"
+          path: .
   "MyPy":
     runs-on: ubuntu-latest
     steps:
@@ -38,16 +37,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.9.0"
-      - name: Install dependencies
-        run: |
-          python3 -m pip install --upgrade pip bandit wheel setuptools
-          python3 -m pip install -r requirements.txt
-      - name: Lint with Bandit
-        run: bandit -r .
+      - uses: jpetrucciani/bandit-check@master
 
   "Black":  # For formatting python files
     runs-on: ubuntu-latest
@@ -64,15 +54,14 @@ jobs:
       steps:
         - name: Checkout code
           uses: actions/checkout@v2
-
         - uses: actions/setup-python@v2
           with:
             python-version: "3.9.0"
-        - name: Install Isort
+        - name: Install isort
           run: |
-            python3 -m pip install isort[requirements_deprecated_finder]
+            python3 -m pip install isort
         - name: Lint with Isort
-          run: python3 -m isort --check-only --diff .
+          run: python3 -m isort . --check --diff
   "Pylint":
     runs-on: ubuntu-latest
     steps:
@@ -86,4 +75,4 @@ jobs:
             python3 -m pip install wheel pylint
             python3 -m pip install -r requirements.txt
         - name: Lint with Pylint
-          run: python3 -m pylint src/**
+          run: python3 -m pylint src/** bin/**
