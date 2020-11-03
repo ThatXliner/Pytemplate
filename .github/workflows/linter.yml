@@ -54,15 +54,12 @@ jobs:
       steps:
         - name: Checkout code
           uses: actions/checkout@v2
-
         - uses: actions/setup-python@v2
           with:
             python-version: "3.9.0"
-        - name: Install Isort
-          run: |
-            python3 -m pip install isort[requirements_deprecated_finder]
-        - name: Lint with Isort
-          run: python3 -m isort --check-only --diff .
+        - uses: jamescurtin/isort-action@master
+          with:
+            requirementsFiles: "requirements.txt"
   "Pylint":
     runs-on: ubuntu-latest
     steps:
@@ -76,4 +73,4 @@ jobs:
             python3 -m pip install wheel pylint
             python3 -m pip install -r requirements.txt
         - name: Lint with Pylint
-          run: python3 -m pylint src/**
+          run: python3 -m pylint src/** bin/**
