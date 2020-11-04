@@ -64,7 +64,7 @@ jobs:
     - python: "3.9-dev"
     - python: "pypy3"
 script:
-  - python3 -m pytest tests/ -vvv --durations=3  --cov=src
+  - python3 -m pytest tests/ -vvv --durations=3  --cov=src --cov-report=xml
   - python3 setup.py sdist bdist_wheel
 after_success:
   - bash <(curl -s https://codecov.io/bash)
