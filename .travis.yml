@@ -1,7 +1,11 @@
 language: python
 dist: xenial
 os: linux
-
+arch:
+ - amd64
+ - ppc64le
+ - s390x
+ - arm64
 python:
   - "nightly"
   - "3.9-dev"
@@ -13,9 +17,9 @@ python:
   # 3.9 doesn't exist yet.
 
 
-branches:
-  only:
-  - master
+# branches:
+#   only:
+#   - master
 
 install:
   - python3 -m ensurepip --upgrade
@@ -58,6 +62,12 @@ jobs:
     - name: "Ubuntu 20"
       os: linux
       dist: focal
+    exclude:
+     - python: "pypy3"
+       arm:
+         - ppc64le
+         - s390x
+         - arm64
   fast_finish: true
   allow_failures:
     - python: "nightly"
