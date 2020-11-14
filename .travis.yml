@@ -61,7 +61,7 @@ jobs:
     - name: "Ubuntu 20"
       os: linux
       dist: focal
-    exclude:
+  exclude:
      - python: "pypy3"
        arm:
          - ppc64le
