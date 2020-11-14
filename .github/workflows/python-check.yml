@@ -51,10 +51,10 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip poetry
           poetry install --no-root
-          poetry env use system
+          poetry lock
       - name: Test with pytest
         run: |
-          make test
+          poetry run make test
           poetry build
   "pytest-MacOS":
     strategy:
@@ -103,10 +103,10 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip poetry
           poetry install  --no-root
-          poetry env use system
+          poetry lock
       - name: Test with pytest
         run: |
-          make test
+          poetry run make test
           poetry build
   "pytest-Windows":
     strategy:
@@ -146,10 +146,10 @@ jobs:
         run: |
           python -m pip install --upgrade pip poetry
           poetry install  --no-root
-          poetry env use system
+          poetry lock
       - name: Run OS-indepentant scripts
         run: setx path "%path%;C:\hostedtoolcache\windows\Python\3.9.0\x64\Scripts"
       - name: Test with pytest
         run: |
-          pytest tests/ -vvv --durations=3
+          poetry run pytest tests/ -vvv --durations=3
           poetry build
