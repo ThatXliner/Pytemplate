@@ -13,7 +13,7 @@ name = "Pytemplate"
 version = "0.1.0"
 description = "Short description shown on Pypi."
 authors = ["Bryan Hu <bryan.hu.2020@gmail.com>"]
-license = "GNU GPL v3+"
+license = "GPL-3.0-or-later"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.6",
