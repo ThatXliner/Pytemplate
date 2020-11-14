@@ -31,8 +31,8 @@ jobs:
           poetry install --no-root
       - name: Lint with MyPy
         run: |
-          python3 -m mypy src
-          [ -d ./bin ] && python3 -m mypy bin || echo "No .pyi files found in /bin"
+          mypy src
+          [ -d ./bin ] && mypy bin || echo "No .pyi files found in /bin"
   "Bandit":
     runs-on: ubuntu-latest
     steps:
@@ -75,4 +75,4 @@ jobs:
             python3 -m pip install poetry
             poetry install --no-root
         - name: Lint with Pylint
-          run: python3 -m pylint src/** bin/**
+          run: pylint src/** bin/**
