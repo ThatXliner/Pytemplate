@@ -77,4 +77,4 @@ jobs:
             poetry install --no-root
             poetry lock
         - name: Lint with Pylint
-          run: poetry run pylint src/** bin/**
+          run: poetry run pylint src/**
