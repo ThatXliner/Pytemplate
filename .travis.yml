@@ -23,9 +23,8 @@ python:
 
 install:
   - python3 -m ensurepip --upgrade
-  - pip3 install -r requirements.txt
-  - pip3 install --upgrade -r pytest-requirements.txt
-  - pip3 install wheel setuptools
+  - pip3 install poetry
+  - poetry install
 
 cache: pip
 jobs:
@@ -62,7 +61,7 @@ jobs:
     - name: "Ubuntu 20"
       os: linux
       dist: focal
-    exclude:
+  exclude:
      - python: "pypy3"
        arm:
          - ppc64le
@@ -74,8 +73,8 @@ jobs:
     - python: "3.9-dev"
     - python: "pypy3"
 script:
-  - python3 -m pytest tests/ -vvv --durations=3  --cov=src --cov-report=xml
-  - python3 setup.py sdist bdist_wheel
+  - poetry run pytest tests/ -vvv --durations=3  --cov=src --cov-report=xml
+  - poetry build
 after_success:
   - bash <(curl -s https://codecov.io/bash)
 notifications:
