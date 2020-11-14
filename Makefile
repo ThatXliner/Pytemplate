@@ -2,7 +2,7 @@ PYTHON := $(python3)
 PYTHONM := $($(PYTHON) -m)
 
 test:
-	@$(PYTHONM) pytest tests/ -vvv --durations=3
+	pytest tests/ -vvv --durations=3
 deps:
 	@$(PYTHONM) ensurepip
 	@echo "Installing dependencies..."
