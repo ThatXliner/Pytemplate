@@ -15,30 +15,33 @@ description = "Short description shown on Pypi."
 authors = ["Bryan Hu <bryan.hu.2020@gmail.com>"]
 license = "GPL-3.0-or-later"
 classifiers = [
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",  # Optional support
-    "Programming Language :: Python :: 3 :: Only",
-    # "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Development Status :: 3 - Alpha",
     "Natural Language :: English",
-    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    # "License :: OSI Approved :: MIT License",
     # "Intended Audience :: Developers",
     # "Intended Audience :: End Users/Desktop",
     # "Intended Audience :: System Administrators",
     # "Topic :: Utilities",
 ]
-packages = [ {include = "src"} ]
-exclude=["tests"]
+readme = "README.md"
+repository = "https://github.com/{USERNAME}/{PACKAGE}"
+homepage = "https://github.com/{USERNAME}/{PACKAGE}"
+documentation = "https://{PACKAGE}.readthedocs.io"
+packages = [ {include = "package_name", from = "src"} ]
+include = ["LICENSE"]
+exclude = ["tests/**"]
+[tool.poetry.scripts]
+keywords = [""]
+package_name = "package_name.__main__:_main"
+[tool.poetry.extras]
+
 [tool.poetry.urls]
 
 "Source Code" = "https://github.com/{USERNAME}/{PACKAGE}"
-"Tracker" = "https://github.com/{USERNAME}/{PACKAGE}/issues"
+"Bug Tracker" = "https://github.com/{USERNAME}/{PACKAGE}/issues"
 "Say Thanks! "= "https://saythanks.io/to/{__contact__}"
 "Travis CI" = "https://travis-ci.com/github/{USERNAME}/{PACKAGE}"
 

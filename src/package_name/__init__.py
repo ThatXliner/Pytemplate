@@ -5,8 +5,6 @@ Package summary.
 
 Long description.
 """
-from typing import List
-
 from . import sub_module  # noqa: F401
 
 # from .sub_module import *  # noqa
@@ -23,16 +21,3 @@ from . import sub_module  # noqa: F401
 # implementation is split across files. Otherwise, we do nothing
 # The reason for this is that if it makes sense to categorize
 # module-level APIs into different files.
-
-
-__title__: str = "package_name"  # The name of the package
-__version__: str = "0.1.0"  # VERSION_BUMP_ANCHOR
-
-# The email of the initial author
-__contact__: str = "bryan.hu.2020@gmail.com"
-
-# The initial author of this project
-__author__: str = f"Bryan Hu <{__contact__}>"
-# NOTE: THE FORMAT OF `__author__` SHOULD ALWAYS BE
-# "FIRST LAST <EMAIL ADDRESS>"
-__credits__: List[str] = []  # Other contributors
