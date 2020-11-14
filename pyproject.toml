@@ -43,7 +43,7 @@ exclude=["tests"]
 "Travis CI" = "https://travis-ci.com/github/{USERNAME}/{PACKAGE}"
 
 [tool.poetry.dependencies]
-python = "~3.6"
+python = "^3.6"
 
 [tool.poetry.dev-dependencies]
 wheel = "^0.35.1"
