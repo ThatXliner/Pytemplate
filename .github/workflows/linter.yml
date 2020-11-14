@@ -27,8 +27,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip mypy wheel setuptools
-          python3 -m pip install -r requirements.txt
+          python3 -m pip install --upgrade pip poetry
+          poetry install --no-root
       - name: Lint with MyPy
         run: |
           python3 -m mypy src
@@ -72,7 +72,7 @@ jobs:
             python-version: "3.9.0"
         - name: Install Pylint
           run: |
-            python3 -m pip install wheel pylint
-            python3 -m pip install -r requirements.txt
+            python3 -m pip install poetry
+            poetry install --no-root
         - name: Lint with Pylint
           run: python3 -m pylint src/** bin/**

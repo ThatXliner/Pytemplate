@@ -53,12 +53,12 @@ jobs:
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip wheel setuptools
-          python3 -m pip install -r requirements.txt -r pytest-requirements.txt
+          python3 -m pip install --upgrade pip poetry
+          poetry install  --no-root
       - name: Test with pytest
         run: |
           make test
-          python3 setup.py sdist bdist_wheel
+          poetry build
   "pytest-MacOS":
     strategy:
       matrix:
@@ -104,12 +104,12 @@ jobs:
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python3 -m pip install --upgrade pip wheel setuptools
-          python3 -m pip install -r requirements.txt -r pytest-requirements.txt
+          python3 -m pip install --upgrade pip poetry
+          poetry install  --no-root
       - name: Test with pytest
         run: |
           make test
-          python3 setup.py sdist bdist_wheel
+          poetry build
   "pytest-Windows":
     strategy:
       matrix:
@@ -146,10 +146,11 @@ jobs:
             ${{ runner.os }}-restore-pip
       - name: Install dependencies
         run: |
-          python -m pip install --no-warn-script-location --upgrade pip wheel setuptools
-          python -m pip install  --no-warn-script-location -r requirements.txt -r pytest-requirements.txt
+          python -m pip install --upgrade pip poetry
+          poetry install  --no-root
       - name: Run OS-indepentant scripts
         run: setx path "%path%;C:\hostedtoolcache\windows\Python\3.9.0\x64\Scripts"
       - name: Test with pytest
         run: |
-          python -m pytest tests/ -vvv --durations=3 && python setup.py sdist bdist_wheel
+          python -m pytest tests/ -vvv --durations=3
+          poetry build
