@@ -21,9 +21,11 @@ python:
 #   only:
 #   - master
 
+befor_install:
+  - python3 -m pip install poetry
+
 install:
-  - curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
-  - poetry install  --no-root
+  - poetry install --no-root
 
 cache: pip
 jobs:
