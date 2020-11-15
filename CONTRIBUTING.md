@@ -92,15 +92,13 @@ Inspired by [GitMoji](https://gitmoji.carloscuesta.me) and @t9md's [emoji conven
 
 Example Git commit message:
 
+The following means you wrote bad code that needs to be improved:
 ```
-Added __main__.py
+:poop: Added __main__.py
 ```
-
-No Emoji required here.
-
-But you *can* here:
+or this, which means you formatted `__main__.py`
 ```
-:black_circle: Blackened code
+:art: Blackened __main__.py
 ```
 
 ### Pull request messages
