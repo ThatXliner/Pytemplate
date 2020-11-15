@@ -4,7 +4,6 @@ os: linux
 arch:
  - amd64
  - ppc64le
- - s390x
  - arm64
 python:
   - "nightly"
@@ -12,7 +11,7 @@ python:
   - "3.8"
   - "3.7"
   - "3.6"
-  - "pypy3"
+  # - "pypy3"
   # - "3.9"
   # 3.9 doesn't exist yet.
 
@@ -63,12 +62,8 @@ jobs:
     - name: "Ubuntu 20"
       os: linux
       dist: focal
-  exclude:
-     - python: "pypy3"
-       arm:
-         - ppc64le
-         - s390x
-         - arm64
+    - python: pypy3
+      arch: amd64
   fast_finish: true
   allow_failures:
     - python: "nightly"
