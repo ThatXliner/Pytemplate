@@ -24,7 +24,7 @@ python:
 install:
   - python3 -m ensurepip --upgrade
   - pip3 install poetry
-  - poetry install
+  - poetry install  --no-root
 
 cache: pip
 jobs:
