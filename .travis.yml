@@ -26,6 +26,7 @@ befor_install:
 
 install:
   - poetry install --no-root
+  - poetry lock
 
 cache: pip
 jobs:
