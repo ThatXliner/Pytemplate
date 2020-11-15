@@ -22,7 +22,7 @@ python:
 #   - master
 
 install:
-  - python3 -m ensurepip --upgrade
+  - python3 -m pip install --upgrade pip wheel
   - pip3 install poetry
   - poetry install  --no-root
 
