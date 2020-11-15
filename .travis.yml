@@ -22,8 +22,7 @@ python:
 #   - master
 
 install:
-  - python3 -m pip install --upgrade pip wheel
-  - pip3 install poetry
+  - curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3 -
   - poetry install  --no-root
 
 cache: pip
