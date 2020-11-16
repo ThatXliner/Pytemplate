@@ -20,7 +20,7 @@ python:
 #   only:
 #   - master
 
-befor_install:
+before_install:
   - python3 -m pip install wheel poetry
 
 install:
