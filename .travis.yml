@@ -21,7 +21,8 @@ python:
 #   - master
 
 before_install:
-  - python3 -m pip install wheel poetry
+  - python3 -m pip install wheel
+  - python3 -m pip install poetry
 
 install:
   - poetry install --no-root
