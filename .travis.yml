@@ -23,8 +23,7 @@ before_install:
   - python3 -m pip install poetry
 
 install:
-  - poetry install --no-root
-  - poetry lock
+  - { poetry install --no-root && poetry lock } || { poetry export && python3 -m pip install -r requirements.txt }
 
 cache: pip
 jobs:
