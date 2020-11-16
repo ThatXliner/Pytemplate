@@ -31,6 +31,9 @@ Short description.
 		<img src="https://img.shields.io/badge/security-bandit-yellow.svg" alt="security: bandit"></a>
 	<a href="https://github.com/psf/black">
 		<img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black"></a>
+	<a href="https://gitmoji.carloscuesta.me">
+		<img src="https://img.shields.io/badge/gitmoji-%20😜%20😍-FFDD67.svg?style=flat-square" alt="Gitmoji">
+	</a>
 </p>
 
 
