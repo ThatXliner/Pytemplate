@@ -1,0 +1,9 @@
+{
+    "repo_name": "Pytemplate",
+    "package_name": "{{ cookiecutter.repo_name.replace(' ', '-') }}",
+    "pypi_name": "{{ cookiecutter.package_name }}",
+    "script_name": "{{ cookiecutter.pypi_name }}",
+    "username": "ThatXliner",
+    "real_name": "Bryan Hu",
+    "email": "bryan.hu.2020@gmail.com"
+}

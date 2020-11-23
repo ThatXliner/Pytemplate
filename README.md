@@ -19,11 +19,11 @@ Short description.
 
 <!-- /TOC -->
 <p align="center">
-	<a href="https://github.com/ThatXliner/Pytemplate/actions?query=workflow%3APythonCI">
-		<img src="https://github.com/ThatXliner/Pytemplate/workflows/PythonCI/badge.svg" alt="PythonCI"></a>
-	<a href="https://codecov.io/gh/ThatXliner/Pytemplate">
-		<img src="https://codecov.io/gh/ThatXliner/Pytemplate/branch/master/graph/badge.svg" alt="codecov"></a>
-	<a href="https://saythanks.io/to/bryan.hu.2020@gmail.com">
+	<a href="https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.repo_name }}/actions?query=workflow%3APythonCI">
+		<img src="https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.repo_name }}/workflows/PythonCI/badge.svg" alt="PythonCI"></a>
+	<a href="https://codecov.io/gh/{{ cookiecutter.username }}/{{ cookiecutter.repo_name }}">
+		<img src="https://codecov.io/gh/{{ cookiecutter.username }}/{{ cookiecutter.repo_name }}/branch/master/graph/badge.svg" alt="codecov"></a>
+	<a href="https://saythanks.io/to/{{ cookiecutter.email }}">
 		<img src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg" alt="Say Thanks!"></a>
 	<a href="https://github.com/PyCQA/bandit">
 		<img src="https://img.shields.io/badge/security-bandit-yellow.svg" alt="security: bandit"></a>
@@ -46,35 +46,11 @@ Long desc.
 
 Optional notice
 
-### via `git clone`
-
-You can clone this repository, run `cd package_root_folder_name`, and then run `pip install .` or `pip3 install .` (or `python3 -m pip install .`).
-
-Here's the complete installation script:
-
-```bash
-/usr/bin/git clone https://github.com/ThatXliner/package_name.git
-cd package_root_folder_name
-/usr/bin/pip3 install . || /usr/bin/python3 -m pip install .
-```
-
-or, a one-liner installation script:
-
-```bash
-/usr/bin/git clone https://github.com/ThatXliner/package_name.git && cd package_root_folder_name && /usr/bin/pip3 install . || /usr/bin/python3 -m pip install .
-```
-
-But, you can make pip do all of this by doing:
-
-```bash
-/usr/bin/python3 -m pip install git+https://github.com/ThatXliner/Pytemplate.git
-```
-
 **NOTE: If you don't have `pip` or `/usr/bin/pip` or `/usr/bin/pip3` (and have tried `/usr/bin/python3 -m pip`), you will need to install pip. See [here](#getting-pip) to find out how to get pip.**
 
 ### via `pip install` (recommended)
 
-You can easily install this package via `pip install package_name` (or `python3 -m pip install package_name`).
+You can easily install this package via `pip install {{ cookiecutter.pypi_name }}` (or `python3 -m pip install {{ cookiecutter.pypi_name }}`).
 
 ## Getting started
 
@@ -92,7 +68,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-[CONTRIBUTING.md](./CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.repo_name }}/blob/master/CONTRIBUTING.md)
 
 ## Help
 
@@ -117,4 +93,4 @@ OR, as a last resort:
 
 ## License
 
-[GNU GPL v3.0](https://choosealicense.com/licenses/gpl-3.0/) unless noted otherwise. If you want to use this code for proprietary use, [contact me](CONTRIBUTING.md#owner-thatxliner-bryan-hu)
+[GNU GPL v3.0](https://choosealicense.com/licenses/gpl-3.0/) unless noted otherwise. If you want to use this code for proprietary use, [contact me](https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.repo_name }}/blob/master/CONTRIBUTING.md#owner-{{ cookiecutter.username.lower().replace('(', '').replace(')', '') }}-{{ cookiecutter.real_name.lower().replace(" ", "-") }})

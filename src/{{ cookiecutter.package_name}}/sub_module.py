@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Initial author: Bryan Hu .
+Initial author: {{ cookiecutter.real_name }} .
 
-@ThatXliner .
+@{{ cookiecutter.username }} .
 
 Version: v0.1.0
 

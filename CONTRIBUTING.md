@@ -118,9 +118,8 @@ Contact contributors' here.
 
 Don't see you contact info here? Submit a pull request adding your contact info to this section.
 
-### [OWNER] ThatXliner (Bryan Hu)
+### [OWNER] {{ cookiecutter.username }} ({{ cookiecutter.real_name }})
 
-Contact ThatXliner (Bryan Hu) at
+Contact {{ cookiecutter.username }} ({{ cookiecutter.real_name }}) at
 
-- Email: [`bryan.hu.2020@gmail.com`](mailto:bryan.hu.2020@gmail.com "Email ThatXliner")
-- Discord username: `ThatXliner#1995`
+- Email: [`{{ cookiecutter.email }}`](mailto:{{ cookiecutter.email }} "Email {{ cookiecutter.username }}")

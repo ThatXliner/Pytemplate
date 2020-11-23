@@ -33,7 +33,6 @@ jobs:
       - name: Lint with MyPy
         run: |
           poetry run mypy src
-          poetry run [ -d ./bin ] && mypy bin || echo "No .pyi files found in /bin"
   "Bandit":
     runs-on: ubuntu-latest
     steps:
@@ -76,5 +75,6 @@ jobs:
             python3 -m pip install poetry
             poetry install --no-root
             poetry lock
+
         - name: Lint with Pylint
           run: poetry run pylint src/**

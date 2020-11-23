@@ -9,10 +9,10 @@ profile = "black"
 line_length = 90
 
 [tool.poetry]
-name = "Pytemplate"
+name = "{{ cookiecutter.pypi_name }}"
 version = "0.1.0"
 description = "Short description shown on Pypi."
-authors = ["Bryan Hu <bryan.hu.2020@gmail.com>"]
+authors = ["{{ cookiecutter.real_name }} <{{ cookiecutter.email }}>"]
 license = "GPL-3.0-or-later"
 classifiers = [
     "Programming Language :: Python :: Implementation :: CPython",
@@ -27,23 +27,22 @@ classifiers = [
     # "Topic :: Utilities",
 ]
 readme = "README.md"
-homepage = "https://github.com/{USERNAME}/{PACKAGE}"
-documentation = "https://{PACKAGE}.readthedocs.io"
-packages = [ {include = "package_name", from = "src"} ]
+homepage = "https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.repo_name }}"
+documentation = "https://{{ cookiecutter.pypi_name }}.readthedocs.io"
+packages = [ {include = "{{ cookiecutter.package_name }}", from = "src"} ]
 include = ["LICENSE"]
 exclude = ["tests/**"]
 keywords = [""]
 
 [tool.poetry.scripts]
-package_name = "package_name.__main__:_main"
+"{{ cookiecutter.script_name }}" = "{{ cookiecutter.package_name }}.__main__:_main"
 
 [tool.poetry.extras]
 
 [tool.poetry.urls]
-"Source Code" = "https://github.com/{USERNAME}/{PACKAGE}"
-"Bug Tracker" = "https://github.com/{USERNAME}/{PACKAGE}/issues"
-"Say Thanks! "= "https://saythanks.io/to/{__contact__}"
-"Travis CI" = "https://travis-ci.com/github/{USERNAME}/{PACKAGE}"
+"Source Code" = "https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.repo_name }}"
+"Bug Tracker" = "https://github.com/{{ cookiecutter.username }}/{{ cookiecutter.repo_name }}/issues"
+"Say Thanks! "= "https://saythanks.io/to/{{ cookiecutter.email }}"
 
 [tool.poetry.dependencies]
 python = "^3.6"
