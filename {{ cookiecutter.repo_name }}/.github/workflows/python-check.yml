@@ -1,3 +1,4 @@
+{% raw %}
 name: PythonCI
 
 on: [push, pull_request]
@@ -121,3 +122,4 @@ jobs:
       - name: Upload coverage report
         run: |
           curl -s https://codecov.io/bash | bash
+{% endraw %}
