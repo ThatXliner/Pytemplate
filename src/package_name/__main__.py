@@ -11,4 +11,5 @@ The main file that will be ran if you did `python -m package_name`
 
 
 """
+# from . import __version__
 pass

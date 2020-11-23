@@ -5,7 +5,7 @@ Package summary.
 
 Long description.
 """
-from . import sub_module  # noqa: F401
+__version__ = "0.1.0"
 
 # from .sub_module import *  # noqa
 

@@ -1,7 +1,5 @@
 name: PythonCI
 
-# Pypi upload and coverage covered in Travis-CI
-
 on: [push, pull_request]
 jobs:
   "pytest-Ubuntu":
@@ -34,28 +32,18 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           architecture: 'x64'
-      - uses: actions/cache@v2
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}-2
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-            ${{ runner.os }}-pip-${{ hashFiles('**/pytest-requirements.txt') }}
-            ${{ runner.os }}-pip-key
-            ${{ runner.os }}-
-            ${{ runner.os }}-restore
-            ${{ runner.os }}-restore-pip
+
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip poetry
-          poetry install --no-root
           poetry lock
       - name: Test with pytest
         run: |
-          poetry run make test
+          poetry run pytest tests/ -vvv --durations=3  --cov=src --cov-report=xml
           poetry build
+      - name: Upload coverage report
+        run: |
+          curl -s https://codecov.io/bash | bash
   "pytest-MacOS":
     strategy:
       matrix:
@@ -86,28 +74,18 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
           architecture: 'x64'
-      - uses: actions/cache@v2
-        with:
-          path: ~/Library/Caches/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}-2
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-            ${{ runner.os }}-pip-${{ hashFiles('**/pytest-requirements.txt') }}
-            ${{ runner.os }}-pip-key
-            ${{ runner.os }}-
-            ${{ runner.os }}-restore
-            ${{ runner.os }}-restore-pip
+
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip poetry
-          poetry install  --no-root
           poetry lock
       - name: Test with pytest
         run: |
-          poetry run make test
+          poetry run pytest tests/ -vvv --durations=3  --cov=src --cov-report=xml
           poetry build
+      - name: Upload coverage report
+        run: |
+          curl -s https://codecov.io/bash | bash
   "pytest-Windows":
     strategy:
       matrix:
@@ -129,27 +107,17 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
-      - uses: actions/cache@v2
-        with:
-          path: ~\AppData\Local\pip\Cache
-          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}
-          restore-keys: |
-            ${{ runner.os }}-pip
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt', '**/pytest-requirements.txt') }}-2
-            ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-            ${{ runner.os }}-pip-${{ hashFiles('**/pytest-requirements.txt') }}
-            ${{ runner.os }}-pip-key
-            ${{ runner.os }}-
-            ${{ runner.os }}-restore
-            ${{ runner.os }}-restore-pip
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip poetry
-          poetry install  --no-root
           poetry lock
       - name: Run OS-indepentant scripts
         run: setx path "%path%;C:\hostedtoolcache\windows\Python\3.9.0\x64\Scripts"
       - name: Test with pytest
         run: |
-          poetry run pytest tests/ -vvv --durations=3
+          poetry run pytest tests/ -vvv --durations=3  --cov=src --cov-report=xml
           poetry build
+      - name: Upload coverage report
+        run: |
+          curl -s https://codecov.io/bash | bash

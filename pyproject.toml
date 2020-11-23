@@ -27,19 +27,19 @@ classifiers = [
     # "Topic :: Utilities",
 ]
 readme = "README.md"
-repository = "https://github.com/{USERNAME}/{PACKAGE}"
 homepage = "https://github.com/{USERNAME}/{PACKAGE}"
 documentation = "https://{PACKAGE}.readthedocs.io"
 packages = [ {include = "package_name", from = "src"} ]
 include = ["LICENSE"]
 exclude = ["tests/**"]
-[tool.poetry.scripts]
 keywords = [""]
+
+[tool.poetry.scripts]
 package_name = "package_name.__main__:_main"
+
 [tool.poetry.extras]
 
 [tool.poetry.urls]
-
 "Source Code" = "https://github.com/{USERNAME}/{PACKAGE}"
 "Bug Tracker" = "https://github.com/{USERNAME}/{PACKAGE}/issues"
 "Say Thanks! "= "https://saythanks.io/to/{__contact__}"
@@ -59,7 +59,6 @@ pylint = "^2.6.0"
 isort = "^5.6.4"
 # Pytest dependencies
 pytest-cov = "^2.10.1"
-pytest-instafail = "^0.4.2"
 pytest-random = "^0.02"
 
 [build-system]
