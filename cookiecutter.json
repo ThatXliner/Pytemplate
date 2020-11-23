@@ -1,6 +1,6 @@
 {
     "repo_name": "Pytemplate",
-    "package_name": "{{ cookiecutter.repo_name.replace(' ', '-') }}",
+    "package_name": "{{ cookiecutter.repo_name.lower().replace(' ', '-') }}",
     "pypi_name": "{{ cookiecutter.package_name }}",
     "script_name": "{{ cookiecutter.pypi_name }}",
     "username": "ThatXliner",
