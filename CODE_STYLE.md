@@ -56,8 +56,8 @@ Python is for readability. But speaking about performance....
 
 Ok, so I know that you shouldn't be doing pre-mature optimizations in python. But the thing is, what if **it's code style**? It is.
 
-If you require a specific type of object as one of your parameters (when defining a function), the recommended approach is to use type hints. This will reduce 
-unnecessary function calls and will greatly improve readability, code maintainability, and user experience (especially if you use a linter such as [MyPy](http://mypy-lang.org/)). 
+If you require a specific type of object as one of your parameters (when defining a function), the recommended approach is to use type hints. This will reduce
+unnecessary function calls and will greatly improve readability, code maintainability, and user experience (especially if you use a linter such as [MyPy](http://mypy-lang.org/)).
 
 What about `try`/`except`s? And `if`/`elif`/`else` statements?
 
@@ -86,11 +86,11 @@ else:
 
 NOTE: Import statements should be [`isort`][1]ed. Our GitHub Action will do that for you, if you can't access [`isort`][1].
 
-The `import` statements you use should conform to [Google's Python Style](https://google.github.io/styleguide/pyguide.html#22-imports)-style `import` statements. 
+The `import` statements you use should conform to [Google's Python Style](https://google.github.io/styleguide/pyguide.html#22-imports)-style `import` statements.
 Here's the summary of it:
 
  - Use `import` for packages/modules only, not anything else. This means you shouldn't be doing `from foo import bar` if `bar` is not a package
-   * Exceptions: `import`ing from `six.moves` and the `typing` module 
+   * Exceptions: `import`ing from `six.moves` and the `typing` module
  -  Do `import y as z` or `from x import y as z` **only if** one or more of the following is true:
     * `z` is a command/standard abbreviation (e.g. `import numpy as np`)
     * If `y` is an inconveniently long name
