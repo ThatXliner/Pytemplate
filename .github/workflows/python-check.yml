@@ -36,7 +36,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip poetry
-          poetry lock
+          poetry run poetry install --no-root
       - name: Test with pytest
         run: |
           poetry run pytest tests/ -vvv --durations=3  --cov=src --cov-report=xml
@@ -78,7 +78,7 @@ jobs:
       - name: Install dependencies
         run: |
           python3 -m pip install --upgrade pip poetry
-          poetry lock
+          poetry run poetry install --no-root
       - name: Test with pytest
         run: |
           poetry run pytest tests/ -vvv --durations=3  --cov=src --cov-report=xml
@@ -111,7 +111,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip poetry
-          poetry lock
+          poetry run poetry install --no-root
       - name: Run OS-indepentant scripts
         run: setx path "%path%;C:\hostedtoolcache\windows\Python\3.9.0\x64\Scripts"
       - name: Test with pytest
