@@ -7,7 +7,7 @@ Long description.
 """
 __version__ = "0.1.0"
 
-# from .sub_module import *  # noqa
+from .sub_module import *  # noqa
 
 # Do the above ONLY when:
 
