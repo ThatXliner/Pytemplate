@@ -2,20 +2,20 @@ name: linter
 
 on: [push, pull_request]
 jobs:
-  "Flake8":
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v2
-        with:
-          python-version: "3.9.0"
+#   "Flake8":
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Set up Python 3.9
+#         uses: actions/setup-python@v2
+#         with:
+#           python-version: "3.9.0"
 
-      - name: Run flake8
-        uses: julianwachholz/flake8-action@v1.1.0
-        with:
-          checkName: "Python Lint"
-          path: .
+#       - name: Run flake8
+#         uses: julianwachholz/flake8-action@v1.1.0
+#         with:
+#           checkName: "Python Lint"
+#           path: .
   "MyPy":
     runs-on: ubuntu-latest
     steps:
