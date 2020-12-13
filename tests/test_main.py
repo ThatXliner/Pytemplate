@@ -1,12 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # type: ignore
-# pylint: disable=all
-# flake8: noqa
-"""
-Unit tests
-"""
-import pytest
+# pylint: disable=C,R0201,R0903
+"""Unit tests"""
 from src import package_name
 
 
